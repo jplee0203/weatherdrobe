@@ -8,7 +8,13 @@
 </head> 
     
     
-<body>
+    
+    
+    
+    
+    
+    
+<body onload="getPosition()">
     
 <div id="body_scroll">     
     
@@ -20,13 +26,13 @@
     
     
 <div class="home_container">
-    
-     <div class="navigation"> 
+     <div class="navigationMouseover" onmouseover="navigationMouse()"></div>
+     <div class="navigation" id="navigation"> 
       <div class="logoDiv"></div>  
       <div class="menuDiv">
-        <button class="homeBut" id="goHome">Home</button>
-        <button class="settingBut">Setting</button>
-        <button class="aboutBut">About</button>
+        <button class="homeBut" id="goHome">HOME</button>
+        <button class="settingBut">SETTING</button>
+        <button class="aboutBut">ABOUT</button>
       </div>   
      </div> 
       
@@ -35,8 +41,8 @@
          <h1 class="weatherDrobe_h1">WeatherDrobe</h1>
        </div>   
        <div class="searchBar_inside"> 
-         <input class="searchInp" type="text" name="Location">
-         <button class="searchBut" id="searchBut">Find Location</button>
+         <input class="searchInp" id="searchInp" type="text"  name="Location">
+         <button class="searchBut" id="searchBut" onClick="readWeather()">Find Location</button>
        </div> 
      </div> 
     
@@ -48,7 +54,7 @@
     
 </div>    
     
-<div class="checkWeather"> 
+<div class="checkWeather" id="checkWeather"> 
 
    <div class="checkWeather_img">
 
@@ -58,39 +64,77 @@
 
        <div id="temperDiv1" class="temper">
             <div id="temperImg1"></div>
-            <p class="temperP">Current Condition</p>  
+            <p class="temperP">Current Condition</p> 
+            <p id="con" class="temperNum">19</p>
        </div>
 
        <div id="temperDiv2" class="temper">
             <div id="temperImg2"></div>
-            <p class="temperP">Day Condition</p> 
+            <p class="temperP">Description</p> 
+            <p id="desc" class="temperNum">19</p>
        </div>
 
        <div id="temperDiv3" class="temper">
             <p class="temperP">Current Temperature</p>
-            <p class="temperNum">19</p>
+            <p id="currentTemp" class="temperNum">19</p>
        </div>
 
        <div id="temperDiv4" class="temper">
             <p class="temperP">High Temperature</p>
-            <p class="temperNum">23</p>
+            <p id="highTemp" class="temperNum">23</p>
        </div>
 
        <div id="temperDiv5" class="temper">
             <p class="temperP">Low Temperature</p>
-            <p class="temperNum">18</p>   
+            <p id="lowTemp" class="temperNum">18</p>   
        </div>
    </div>  
     
    <div class="downArrow" id="goWear"></div>
     
     
+</div>  
+    
+<div id="checkWear"> 
+   <div id="wearDiv">
+       <div id="wearDiv1" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Hat</p>
+              <div class="wearicon" id="hatIcon"></div>
+       </div>
+
+       <div id="wearDiv2" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Shirt</p> 
+              <div class="wearicon" id="shirtIcon"></div>
+       </div>
+
+       <div id="wearDiv3" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Pants</p>
+              <div class="wearicon" id="pantsIcon"></div>
+       </div>
+
+       <div id="wearDiv4" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Shoes</p>
+              <div class="wearicon" id="shoesIcon"></div>
+       </div>
+
+       <div id="wearDiv5" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Accessories</p>
+            <div class="wearicon" id="accessoriesIcon"></div>
+       </div>
+   </div>   
+
+    <div class="downArrow" id="goWear_wear"></div>
 </div>     
 
 <div class="header2">    
      <div class="header2_buts">  
-          <button class="weatherBut">Weather</button>
-          <button class="wearBut">Wear</button>
+          <button class="weatherBut_clicked" id="weatherBut">Weather</button>
+          <button class="wearBut" id="wearBut">Wear</button>
           <button class="travelBut">Travel</button>
      </div> 
      <div class="header2_footer"> 
@@ -206,7 +250,9 @@
 </body>
     
 <script src="script/index.js"></script>
-    
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlQCrZOdG7hScwu2caGsEjhabuVYzMxy8&callback=initMap">
+    </script>    
 
     
 </html>
