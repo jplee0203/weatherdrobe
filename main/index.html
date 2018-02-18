@@ -8,6 +8,12 @@
 </head> 
     
     
+    
+    
+    
+    
+    
+    
 <body>
     
 <div id="body_scroll">     
@@ -20,13 +26,13 @@
     
     
 <div class="home_container">
-    
-     <div class="navigation"> 
+     <div class="navigationMouseover" onmouseover="navigationMouse()"></div>
+     <div class="navigation" id="navigation"> 
       <div class="logoDiv"></div>  
       <div class="menuDiv">
-        <button class="homeBut" id="goHome">Home</button>
-        <button class="settingBut">Setting</button>
-        <button class="aboutBut">About</button>
+        <button class="homeBut" id="goHome">HOME</button>
+        <button class="settingBut">SETTING</button>
+        <button class="aboutBut">ABOUT</button>
       </div>   
      </div> 
       
@@ -35,7 +41,7 @@
          <h1 class="weatherDrobe_h1">WeatherDrobe</h1>
        </div>   
        <div class="searchBar_inside"> 
-         <input class="searchInp" type="text" name="Location">
+         <input class="searchInp" type="text" placeholder="Current Location is Port Moody" name="Location">
          <button class="searchBut" id="searchBut">Find Location</button>
        </div> 
      </div> 
@@ -48,7 +54,7 @@
     
 </div>    
     
-<div class="checkWeather"> 
+<div class="checkWeather" id="checkWeather"> 
 
    <div class="checkWeather_img">
 
@@ -85,12 +91,48 @@
    <div class="downArrow" id="goWear"></div>
     
     
+</div>  
+    
+<div id="checkWear"> 
+   <div id="wearDiv">
+       <div id="wearDiv1" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Hat</p>
+              <div class="wearicon" id="hatIcon"></div>
+       </div>
+
+       <div id="wearDiv2" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Shirt</p> 
+              <div class="wearicon" id="shirtIcon"></div>
+       </div>
+
+       <div id="wearDiv3" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Pants</p>
+              <div class="wearicon" id="pantsIcon"></div>
+       </div>
+
+       <div id="wearDiv4" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Shoes</p>
+              <div class="wearicon" id="shoesIcon"></div>
+       </div>
+
+       <div id="wearDiv5" class="wear">
+            <div class="wearImg" id=""></div>
+            <p class="wearP">Accessories</p>
+            <div class="wearicon" id="accessoriesIcon"></div>
+       </div>
+   </div>   
+
+    <div class="downArrow" id="goWear_wear"></div>
 </div>     
 
 <div class="header2">    
      <div class="header2_buts">  
-          <button class="weatherBut">Weather</button>
-          <button class="wearBut">Wear</button>
+          <button class="weatherBut_clicked" id="weatherBut">Weather</button>
+          <button class="wearBut" id="wearBut">Wear</button>
           <button class="travelBut">Travel</button>
      </div> 
      <div class="header2_footer"> 

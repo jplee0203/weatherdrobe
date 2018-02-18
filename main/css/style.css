@@ -1,7 +1,33 @@
        body{
            overflow:hidden;  
-            
+          
         }
+@font-face{
+    font-family: MyriadPro;  
+    src: url(../fonts/Myriad/Myriad-Pro-Regular.ttf);
+}
+
+    @font-face {
+    font-family: MontserratAlternates;
+    src: url(../fonts/montserrat/MontserratAlternates-Regular.otf);
+}
+ @font-face {
+ font-family: MontserratMedium; 
+   src: url(../fonts/montserrat/Montserrat-Medium.otf);   
+     }
+
+ @font-face {
+ font-family: MontserratRegular; 
+   src: url(../fonts/montserrat/Montserrat-Regular.otf);   
+     }
+ @font-face {
+ font-family: RobotoThin; 
+   src: url(../fonts/roboto/Roboto-Thin.ttf);   
+     }
+
+
+
+
         #body_scroll{
              position: absolute;
             top: 0;
@@ -62,7 +88,7 @@
         }
         .weatherDrobe_h1{
            position: absolute;
-        
+           font-family: MontserratMedium; 
             align-items: center;
             width: 100%;
             height: 100%;
@@ -97,18 +123,19 @@
             bottom: 0px;
              width: 20%;
             height: 100%;
-            background-color: #f1f1f1;
-            color: black;
+            background-color: #719eb3;
+            color: #fff;
             font-size: 16px;
             border: none;
             cursor: pointer;
             border-radius: 5px;
             text-align: center;
+            font-family: MyriadPro; 
         }
 
         .searchBut:hover {
-            background-color: black;
-            color: white;
+            background-color: #e0f4ec;
+            color: black;
         }
         
       
@@ -118,33 +145,43 @@
             bottom: 0px;
              width: 75%;
             height: 100%;
-
+            font-family: MyriadPro; 
             padding: 12px 20px;
-
+            font-size: 15px;
             box-sizing: border-box;
-            border: 3px solid #ccc;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
             -webkit-transition: 0.5s;
             transition: 0.5s;
             outline: none;
         }
 
         .searchInp:focus {
-            border: 3px solid #555;
+            border: 3px solid #719eb3;
         }
         
         
 /* ---------------- navigation --------------------  */
-        
-        
-        
-         .navigation {
-             
-           position:fixed;;
+         .navigationMouseover {  
+           position:fixed;
             left: 0px;
             top: 0px;
              width: 100%;
             height: 10%;
-            background-color: #fff;
+            opacity: 0;
+             float: left;
+             z-index: 990;
+        }
+        
+        
+         .navigation {
+             
+           position:fixed;
+            left: 0px;
+            top: -10%;
+             width: 100%;
+            height: 10%;
+            background: rgba(255, 255, 255, 0.8);
              float: left;
              z-index: 999;
         }
@@ -155,7 +192,7 @@
             margin: auto;
              width: 50%;
             height: 100%;
-            background-color: #000;
+       
             
         }
         .logoDiv{
@@ -166,11 +203,9 @@
             margin: auto;
             width: 50px;
             height: 50px;
-            background-image: url("https://commons.bcit.ca/broadcastnews/files/2016/04/xE2oNW4u.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-color: #000; 
-            
+            background-image: url("../img/logo2.png");
+            background-size:contain;
+            background-repeat: no-repeat;   
         }
         .homeBut{
             position: absolute;
@@ -178,13 +213,19 @@
             top: 0px;
             width: 33.35%;
             height: 100%;
-            background-color: #fff;
+            background: rgba(255, 255, 255, 0);
             color: black;
             font-size: 16px;
             border: none;
             cursor: pointer;
             text-align: center;
             z-index: 2;
+            -moz-transform: skewX(-10deg);
+            -webkit-transform: skewX(-10deg);
+            -o-transform: skewX(-10deg);
+            -ms-transform: skewX(-10deg);
+        font-family: MontserratAlternates;    
+            
         }
         .settingBut{
             position: absolute;
@@ -194,13 +235,18 @@
             margin: auto;
             width: 33.33%;
             height: 100%;
-            background-color: #fff;
+            background: rgba(255, 255, 255, 0);
             color: black;
             font-size: 16px;
             border: none;
             cursor: pointer;
             text-align: center;
             z-index: 2;
+            -moz-transform: skewX(-10deg);
+            -webkit-transform: skewX(-10deg);
+            -o-transform: skewX(-10deg);
+            -ms-transform: skewX(-10deg);
+             font-family: MontserratAlternates; 
         }
         .aboutBut{
             position: absolute;
@@ -208,14 +254,20 @@
             top: 0px;
             width: 33.35%;
             height: 100%;
-            background-color: #fff;
+            background: rgba(255, 255, 255, 0);
             color: black;
             font-size: 16px;
             border: none;
             cursor: pointer;
             text-align: center;
             z-index: 2;
+            -moz-transform: skewX(-10deg);
+            -webkit-transform: skewX(-10deg);
+            -o-transform: skewX(-10deg);
+            -ms-transform: skewX(-10deg);
+             font-family: MontserratAlternates; 
         }
+    
           .homeBut:hover {
             background-color: #e0f4ec;
             color: black;
@@ -245,7 +297,9 @@
         }        
        
        .header1_h1{
+           font-family:MyriadPro;  
            position: absolute;
+            color: #666686;
             width: 80%;
             height: 40%;
             top:0;
@@ -255,16 +309,130 @@
             font-size: 50px;
             margin: auto;       
         }
-              
- /* ---------------- checkWeather --------------------  */              
-        .checkWeather{
-            position: absolute;
-            background-color:whitesmoke; 
+
+ /* ---------------- checkWeather --------------------  */
+
+
+        #checkWear{
+           position: absolute;
+           background-color:#ebebeb; 
             top:18%;
             width: 100%;
-            height: 14%;
-           
+            height: 16%;
+           display: none;  
+        }
+     
+      
        
+        
+        #wearDiv{
+           position: absolute;
+            right: 20%;
+            top: 10%;
+            width: 60%;
+            height: 80%;   
+        } 
+      
+        #wearDiv1{
+           position: absolute;
+           top:0;
+           width: 100%;
+           height: 20%;
+           border-bottom: 6px solid #000;  
+        }
+          #wearDiv2{
+           position: absolute;
+           top:20%;
+           width: 100%;
+           height: 20%;
+           border-bottom: 6px solid #000;
+        }
+          #wearDiv3{
+           position: absolute;
+           top:40%;
+           width: 100%;
+           height: 20%;
+           border-bottom: 6px solid #000;
+        }
+          #wearDiv4{
+           position: absolute;
+           top:60%;
+           width: 100%;
+           height: 20%;
+           border-bottom: 6px solid #000;  
+        }
+          #wearDiv5{
+           position: absolute;
+           top:80%;
+           width: 100%;
+           height: 20%;
+           border-bottom: 6px solid #000;  
+        }
+        .wearP{
+            font-family: RobotoThin;
+            font-weight: bold;
+            position: absolute;
+            bottom:-20px;
+            font-size: 30px;
+            left:40%;
+        }
+        .wearNum{
+            position: absolute;
+            bottom:-20px;
+            font-size: 30px;;
+            right: 15px;
+        }
+     
+        .wearImg{
+            position: absolute;
+            background-image: url("../img/arrow.png");
+            background-size: 50px;
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 50px;
+            bottom:10px;
+            right: 0;
+            z-index: 3;
+        }
+        .wearicon
+        {
+            position: absolute;
+            background-image: url("https://marketplace.canva.com/MAB5nccL-pw/1/thumbnail/canva-arrow-MAB5nccL-pw.png");
+            background-size: 50px;
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 50px;
+            bottom:10px;
+            left: 0;
+            z-index: 3;
+        }
+        #hatIcon{
+           background-image: url("../img/wearIcon/accessories.png");  
+        } 
+        #shirtIcon{
+             background-image: url("../img/wearIcon/shirt-man.png");
+        }  
+        #pantsIcon{
+             background-image: url("../img/wearIcon/pants.png");
+        }  
+        #shoesIcon{
+             background-image: url("../img/wearIcon/shoes-man.png");
+        }  
+        #accessoriesIcon{
+             background-image: url("../img/wearIcon/umbrella.png");
+        } 
+
+
+
+
+
+/* ---------------- checkWeather --------------------  */              
+        .checkWeather{
+            position: absolute;
+            background-color:#ebebeb; 
+            top:18%;
+            width: 100%;
+            height: 16%;       
           
         }       
               
@@ -276,8 +444,8 @@
                margin: auto;
             width: 25%;
             height: 40%;
-            background-color: #f1f1f1;
-                background-image: url("http://www.thebubble.com/wp-content/uploads/2016/04/Rain.jpg");
+          
+                background-image: url(../img/rainCoin.png);
                background-size: cover;
             background-repeat: no-repeat;   
         }
@@ -285,7 +453,9 @@
         #temperDiv{
            position: absolute;
             right: 10%;
-            top: 10%;
+            top: 0;
+               bottom: 0;
+               margin: auto;
             width: 45%;
             height: 80%;   
         } 
@@ -295,46 +465,50 @@
            top:0;
            width: 100%;
            height: 20%;
-           border-bottom: 6px solid #003E6B;  
+           border-bottom: 6px solid #000;  
         }
           #temperDiv2{
            position: absolute;
            top:20%;
            width: 100%;
            height: 20%;
-           border-bottom: 6px solid #003E6B;
+           border-bottom: 6px solid #000;
         }
           #temperDiv3{
            position: absolute;
            top:40%;
            width: 100%;
            height: 20%;
-           border-bottom: 6px solid #003E6B;
+           border-bottom: 6px solid #000;
         }
           #temperDiv4{
            position: absolute;
            top:60%;
            width: 100%;
            height: 20%;
-           border-bottom: 6px solid #003E6B;  
+           border-bottom: 6px solid #000;  
         }
           #temperDiv5{
            position: absolute;
            top:80%;
            width: 100%;
            height: 20%;
-           border-bottom: 6px solid #003E6B;  
+           border-bottom: 6px solid #000;  
         }
         .temperP{
             position: absolute;
             bottom:-20px;
-            font-size: 30px;;
+            font-size: 30px;
+            font-family: RobotoThin;
+            font-weight: bold;
         }
         .temperNum{
             position: absolute;
             bottom:-20px;
             font-size: 30px;;
             right: 15px;
+            right: 15px;
+            font-family: MontserratRegular;
         }
         #temperImg2{
             position: absolute;
@@ -355,16 +529,17 @@
             bottom:10px;
             right: 0;
             z-index: 3;
+
         }     
               
  /* ---------------- header2 --------------------  */             .header2{ 
         
             position: absolute;
-            top: 32%;
+            top: 34%;
             left: 0;
             background-color: white;
             width: 100%;
-            height: 10%;
+            height: 8%;
      background-image: url(https://static.pexels.com/photos/110874/pexels-photo-110874.jpeg);
      background-size: cover;
      background-repeat: no-repeat;
@@ -380,13 +555,15 @@
         }  
     
      .weatherBut{
+            font-family: MontserratRegular; 
             position: absolute;
             left: 0px;
             top: 0px;
             width: 30%;
             height: 100%;
-            background-color: #f1f1f1;
-            color: black;
+            background-color: #3b455f;
+            
+            color: #ebebeb;
             font-size: 16px;
             border: none;
             cursor: pointer;
@@ -394,6 +571,7 @@
             z-index: 2;
         }
         .wearBut{
+            font-family: MontserratRegular;
             position: absolute;
             right: 0px;
             left: 0px;
@@ -401,8 +579,8 @@
             margin: auto;
             width: 30%;
             height: 100%;
-            background-color: #f1f1f1;
-            color: black;
+            background-color: #3b455f;
+             color: #ebebeb;
             font-size: 16px;
             border: none;
             cursor: pointer;
@@ -410,12 +588,30 @@
             z-index: 2;
         }
         .travelBut{
+            font-family: MontserratRegular;
             position: absolute;
             right: 0px;
             top: 0px;
             width: 30%;
             height: 100%;
-            background-color: #f1f1f1;
+            background-color: #3b455f;
+            color: #ebebeb;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            z-index: 2;
+        }
+        .weatherBut_clicked{
+            font-family: MontserratRegular; 
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 30%;
+            margin-top: -20px; 
+            height: 140%;
+            background-color: #ebebeb;
+            
             color: black;
             font-size: 16px;
             border: none;
@@ -423,17 +619,57 @@
             text-align: center;
             z-index: 2;
         }
+        .wearBut_clicked{
+            font-family: MontserratRegular;
+            position: absolute;
+            right: 0px;
+            left: 0px;
+            top: 0px;
+            margin: auto;
+            width: 30%;
+            margin-top: -20px; 
+            height: 140%;
+            background-color: #ebebeb;
+             color: black;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            z-index: 2;
+        }
+        .travelBut_clicked{
+            font-family: MontserratRegular;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 30%;
+            margin-top: -20px; 
+            height: 140%;
+            background-color: #ebebeb;
+             color: black;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            z-index: 2;
+        }
           .weatherBut:hover {
-            background-color: black;
-            color: white;
+            background-color: #ebebeb;
+            color: black;
+            margin-top: -20px; 
+            height: 140%; 
         }
           .wearBut:hover {
-            background-color: black;
-            color: white;
+            background-color: #ebebeb;
+            color: black;
+            margin-top: -20px; 
+            height: 140%; 
         }
           .travelBut:hover {
-            background-color: black;
-            color: white;
+            background-color: #ebebeb;
+            color: black;
+            margin-top: -20px; 
+            height: 140%;  
         }    
         
     /* ---------------- header2 --------------------  */       
@@ -441,11 +677,12 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(190, 194, 203, 0.57);
             width: 100%;
             height: 30%;
         }
             .header2_footerH{
+            font-family: MyriadPro;
             position: absolute;
             bottom: 0;
             top:0;
@@ -453,10 +690,13 @@
             left: 5%;
             width: 70%;
             height: 40%;
+            color: 2b2b2b;    
             text-align: left; 
             font-size: 50px;    
         }
             .header2_footerBut{
+            font-family: MyriadPro;
+                
             position: absolute;
              position: absolute;
             bottom: 0;
@@ -465,8 +705,8 @@
             right: 5%;
             width: 20%;
             height: 50%;
-            background-color: #f1f1f1;
-            color: black;
+            background-color: #fff;
+            color: #4d4d4d;
             font-size: 16px;
             border: none;
             cursor: pointer;
@@ -475,8 +715,8 @@
             border-radius: 5px;
         }
         .header2_footerBut:hover {
-           background-color: black;
-            color: white;
+           background-color: #3b455f;
+            color: #ebebeb;
         }
         
   /* ---------------- weatherSuggestion --------------------  */         
@@ -485,7 +725,7 @@
              position: absolute;
             top: 42%;
             left: 0;
-            background-color: whitesmoke;
+            background-color: white;
             width: 100%;
             height: 16%;
             
@@ -503,7 +743,8 @@
             height: 80%
         }
         .suggestion_h1{
-        
+           font-family: MyriadPro;
+            color: #292b2a;
            position: absolute;
            left:0;
            right: 0;
@@ -516,7 +757,8 @@
         }
         
         .suggestion_p{
-         
+            color: #525252;
+          font-family: MontserratRegular;
            position: absolute;
             top:10%;
            left:0;
@@ -557,7 +799,7 @@
            top: 0;
             left: 0;
            margin: auto;
-           background-color: #003E6B;
+           background-color: #004a9d;
         }
               .suggestion_right{
              position: absolute;
@@ -567,7 +809,7 @@
            top: 0;
             right: 0;
            margin: auto;
-           background-color: #003E6B;
+           background-color: #004a9d;
         }
             .suggestion_leftImg{
              position: absolute;
@@ -600,11 +842,13 @@
             position: absolute;
             top: 58%;
            
-            background-color:darkgrey;
+            background-color:#efeff4;
             width: 100%;
             height: 3%;
         }
             .header3_footerH{
+            font-family: MyriadPro;
+            color:#333333;    
             position: absolute;
             bottom: 0;
             top:0;
@@ -616,6 +860,8 @@
             font-size: 25px;    
         }
             .header3_footerBut{
+             font-family: MyriadPro;
+            color:#333333;      
             position: absolute;
              position: absolute;
             bottom: 0;
@@ -624,8 +870,8 @@
             right: 10%;
             width: 15%;
             height: 35%;
-            background-color: #f1f1f1;
-            color: black;
+            background-color: #fff;
+            color: #333333; 
             font-size: 16px;
             border: none;
             cursor: pointer;
@@ -634,9 +880,9 @@
             border-radius: 5px;
         }
         .header3_footerBut:hover {
-           background-color: black;
-            color: white;
-        }    
+           background-color: #3b455f;
+            color: #ebebeb;
+        }
   /* ---------------- header4 --------------------  */             .header4{ 
         
             position: absolute;
@@ -657,7 +903,7 @@
              position: absolute;
             top: 69%;
             left: 0;
-            background-color: whitesmoke;
+            background-color: white;
             width: 100%;
             height: 16%;
             
@@ -675,7 +921,8 @@
             height: 80%
         }
         .travel_h1{
-        
+           font-family: MyriadPro;
+           color: #292b2a;
            position: absolute;
            left:0;
            right: 0;
@@ -688,7 +935,8 @@
         }
         
         .travel_p{
-         
+           color: #525252;
+           font-family: MontserratRegular;
            position: absolute;
             top:10%;
            left:0;
@@ -729,7 +977,7 @@
            top: 0;
             left: 0;
            margin: auto;
-           background-color: #003E6B;
+           background-color: #004a9d;
         }
               .travel_right{
              position: absolute;
@@ -739,7 +987,7 @@
            top: 0;
             right: 0;
            margin: auto;
-           background-color: #003E6B;
+           background-color: #004a9d;
         }
             .travel_leftImg{
              position: absolute;
@@ -771,11 +1019,13 @@
         .header5_footer{
             position: absolute;
             top: 85%;
-            background-color:darkgrey;
+            background-color:#efeff4;
             width: 100%;
             height: 3%;
         }
             .header5_footerH{
+            font-family: MyriadPro;
+            color:#333333;     
             position: absolute;
             bottom: 0;
             top:0;
@@ -787,16 +1037,17 @@
             font-size: 30px;    
         }
             .header5_footerBut{
+            font-family: MyriadPro;
+            color:#333333;  
             position: absolute;
-             position: absolute;
             bottom: 0;
             top:0;
             margin: auto;    
             right: 10%;
             width: 15%;
             height: 35%;
-            background-color: #f1f1f1;
-            color: black;
+            background-color: #fff;
+            color: #333333;    
             font-size: 16px;
             border: none;
             cursor: pointer;
@@ -805,15 +1056,15 @@
             border-radius: 5px;
         }
         .header5_footerBut:hover {
-           background-color: black;
-            color: white;
+              background-color: #3b455f;
+            color: #ebebeb;
         }  
         
 /* ---------------- footer1 --------------------  */       
        
         .footer1{ position: absolute;
             top: 88%;
-            background-color:#003E6B;
+            background-color:#333353;
             width: 100%;
             height: 9%;}
         
@@ -822,14 +1073,13 @@
             left: 0;
             right: 0;
             top: 10%;
-        
             margin: auto;
             width: 100px;
             height: 100px;
-            background-image: url("https://commons.bcit.ca/broadcastnews/files/2016/04/xE2oNW4u.png");
-            background-size: cover;
+           background-image: url("../img/logo.png");
+            background-size:contain;
             background-repeat: no-repeat;
-            background-color: #000; 
+           
             
         }
         
@@ -851,51 +1101,56 @@
             height: 40%;}  
         
           .footer1_more{ position: absolute;
-               position: absolute;
+              
             right: 20%;
             bottom: 15%;
             width: 15%;
             height: 40%;}
         
         .footer1_h2{
+            font-family: MontserratRegular;
+            color: #00ff9c;
             position: absolute;
             top: 0;
             margin: auto;  
             width: 100%;
             height: 20%;
-            color: aliceblue;
             text-align: center;} 
         
          .footer1_p1{
+            font-family: MontserratRegular; 
             position: absolute;
             top: 30%;
             margin: auto;  
             width: 100%;
             height: 15%;
-            color: ghostwhite;
+            color: #979797;
             text-align: center;} 
+
          .footer1_p2{
+            font-family: MontserratRegular; 
             position: absolute;
             top: 50%;
             margin: auto;  
             width: 100%;
             height: 15%;
-            color: ghostwhite;
+            color: #979797;
             text-align: center;} 
            
 /* ---------------- footer2 --------------------  */       
        
         .footer2{ position: absolute;
             top: 97%;
-            background-color:#000;
+            background-color:#2c2c4b;
             width: 100%;
             height: 3%;}   
         
    
        .footer2_h{ 
+           font-family: MontserratRegular; 
           position: absolute;
             bottom: 0;
-           color: aliceblue;
+           color: #979797;
             top:0;
             margin: auto;    
             left: 10%;
@@ -915,10 +1170,10 @@
            
             width: 50px;
             height: 50px;
-            background-image: url("https://commons.bcit.ca/broadcastnews/files/2016/04/xE2oNW4u.png");
-            background-size: cover;
+            background-image: url(../img/logo.png);
+            background-size:contain;
             background-repeat: no-repeat;
-           background-color: #000; }
+           }
         
         .downArrow{
             
