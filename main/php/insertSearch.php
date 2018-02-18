@@ -2,10 +2,14 @@
 
 header('Access-Control-Allow-Origin:*');
 
+
 $host="127.0.0.1";
 $username="jplee603_wd";  
 $password="123456789";
 $db_name="jplee603_weatherdrobe"; 
+
+
+
 
 $conn = new mysqli($host, $username, $password, $db_name);
 

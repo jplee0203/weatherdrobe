@@ -230,9 +230,11 @@ var map = document.getElementById("map");
                 
                 console.log(results);
                 
+
                 country = results[1].address_components[3].short_name;
                 
                 city = results[1].address_components[0].long_name;
+
                 
                 var searchInp = document.getElementById("searchInp");
                 
