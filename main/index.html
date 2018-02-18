@@ -14,7 +14,7 @@
     
     
     
-<body>
+<body onload="getPosition()">
     
 <div id="body_scroll">     
     
@@ -41,8 +41,8 @@
          <h1 class="weatherDrobe_h1">WeatherDrobe</h1>
        </div>   
        <div class="searchBar_inside"> 
-         <input class="searchInp" type="text" placeholder="Current Location is Port Moody" name="Location">
-         <button class="searchBut" id="searchBut">Find Location</button>
+         <input class="searchInp" id="searchInp" type="text"  name="Location">
+         <button class="searchBut" id="searchBut" onClick="readWeather()">Find Location</button>
        </div> 
      </div> 
     
@@ -64,27 +64,29 @@
 
        <div id="temperDiv1" class="temper">
             <div id="temperImg1"></div>
-            <p class="temperP">Current Condition</p>  
+            <p class="temperP">Current Condition</p> 
+            <p id="con" class="temperNum">19</p>
        </div>
 
        <div id="temperDiv2" class="temper">
             <div id="temperImg2"></div>
-            <p class="temperP">Day Condition</p> 
+            <p class="temperP">Description</p> 
+            <p id="desc" class="temperNum">19</p>
        </div>
 
        <div id="temperDiv3" class="temper">
             <p class="temperP">Current Temperature</p>
-            <p class="temperNum">19</p>
+            <p id="currentTemp" class="temperNum">19</p>
        </div>
 
        <div id="temperDiv4" class="temper">
             <p class="temperP">High Temperature</p>
-            <p class="temperNum">23</p>
+            <p id="highTemp" class="temperNum">23</p>
        </div>
 
        <div id="temperDiv5" class="temper">
             <p class="temperP">Low Temperature</p>
-            <p class="temperNum">18</p>   
+            <p id="lowTemp" class="temperNum">18</p>   
        </div>
    </div>  
     
@@ -248,7 +250,9 @@
 </body>
     
 <script src="script/index.js"></script>
-    
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlQCrZOdG7hScwu2caGsEjhabuVYzMxy8&callback=initMap">
+    </script>    
 
     
 </html>

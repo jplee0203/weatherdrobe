@@ -512,8 +512,8 @@
         }
         #temperImg2{
             position: absolute;
-            background-color: darkslategray;
-            background-image: url(https://daks2k3a4ib2z.cloudfront.net/588249220800d83a0710ac2b/5a05c7a212148e000158d7a9_cloud-computing-icon-pivotal-it.svg);
+            
+            background-image: /* url(https://daks2k3a4ib2z.cloudfront.net/588249220800d83a0710ac2b/5a05c7a212148e000158d7a9_cloud-computing-icon-pivotal-it.svg); */
             width: 50px;
             height: 50px;
             bottom:10px;
@@ -522,8 +522,8 @@
         }
         #temperImg1{
             position: absolute;
-            background-color: darkslategray;
-            background-image: url(https://image.flaticon.com/icons/svg/146/146204.svg);
+            
+           /* background-image: url(https://image.flaticon.com/icons/svg/146/146204.svg); */
             width: 50px;
             height: 50px;
             bottom:10px;
