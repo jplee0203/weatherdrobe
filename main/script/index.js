@@ -102,10 +102,6 @@ document.getElementById("goWear_travel").addEventListener("click", function(){
     goHome()
 });      
 
-function navigationMouse() {
-   showMenu(); 
-}
-
 document.getElementById("wearBut").addEventListener("click", function(){
     document.getElementById("checkWear").style.display = "block" 
     document.getElementById("wearBut").className = "wearBut_clicked"   
