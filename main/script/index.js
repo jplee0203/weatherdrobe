@@ -16,6 +16,24 @@ function showMenu(){
     
 }
 
+function fixedMenu(){   
+ document.getElementById("navigation").style.top= 0;
+ document.getElementById("navigation").style.transition = "top 1s";
+}
+
+function fixedMenuOut(){   
+ document.getElementById("navigation").style.top= "-10%";
+ document.getElementById("navigation").style.transition = "top 1s";
+}
+
+function navigationMouseOut(){
+  fixedMenuOut();  
+}
+
+function navigationMouse() { 
+  fixedMenu();
+}
+
 
 document.getElementById("searchBut").addEventListener("click", function(){
     showMenu(); 
