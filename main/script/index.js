@@ -1,7 +1,30 @@
 document.getElementById("body_scroll").onmousewheel = function(event){
- 
  showMenu();   
 };
+
+function goHome(){
+    showMenu();  
+    var scTop = document.getElementById("body_scroll").scrollTop;
+    var scStart = setInterval(function(){ 
+        scTop = scTop-15;   
+    document.getElementById("body_scroll").scrollTop = scTop;
+        if(scTop <= 0){   
+           clearInterval(scStart); 
+        }                              
+     },1);
+}
+
+function goNext(){
+  showMenu();  
+    var scTop = document.getElementById("body_scroll").scrollTop;
+    var scStart = setInterval(function(){ 
+        scTop = scTop+15;   
+    document.getElementById("body_scroll").scrollTop = scTop;
+        if(scTop > 2107.77783203125){   
+           clearInterval(scStart); 
+        }                              
+     },1);
+}
 
 function showMenu(){
     
@@ -45,32 +68,19 @@ document.getElementById("searchBut").addEventListener("click", function(){
            clearInterval(scStart); 
         }                              
      },1);
-  });    
- document.getElementById("goWear").addEventListener("click", function(){
-    showMenu();  
-    var scTop = document.getElementById("body_scroll").scrollTop;
-    var scStart = setInterval(function(){ 
-        scTop = scTop+15;   
-    document.getElementById("body_scroll").scrollTop = scTop;
-        if(scTop > 2107.77783203125){   
-           clearInterval(scStart); 
-        }                              
-     },1);
-  
+  });   
+
+document.getElementById("goWear").addEventListener("click", function(){
+    goNext() 
 });  
 
 document.getElementById("goWear_wear").addEventListener("click", function(){
-    showMenu();  
-    var scTop = document.getElementById("body_scroll").scrollTop;
-    var scStart = setInterval(function(){ 
-        scTop = scTop+15;   
-    document.getElementById("body_scroll").scrollTop = scTop;
-        if(scTop > 2107.77783203125){   
-           clearInterval(scStart); 
-        }                              
-     },1);
-  
-});  
+    goNext()
+}); 
+
+document.getElementById("goWear_travel").addEventListener("click", function(){
+    goNext() 
+}); 
 
  document.getElementById("goTravel").addEventListener("click", function(){
     showMenu();  
@@ -85,52 +95,43 @@ document.getElementById("goWear_wear").addEventListener("click", function(){
 });  
     
  document.getElementById("goHome").addEventListener("click", function(){
-    showMenu();  
-    var scTop = document.getElementById("body_scroll").scrollTop;
-    var scStart = setInterval(function(){ 
-        scTop = scTop-15;   
-    document.getElementById("body_scroll").scrollTop = scTop;
-        if(scTop <= 0){   
-           clearInterval(scStart); 
-        }                              
-     },1);
+    goHome()
 }); 
     
  document.getElementById("goHomeArrow").addEventListener("click", function(){
-    showMenu();  
-    var scTop = document.getElementById("body_scroll").scrollTop;
-    var scStart = setInterval(function(){ 
-        scTop = scTop-15;   
-    document.getElementById("body_scroll").scrollTop = scTop;
-        if(scTop <= 0){   
-           clearInterval(scStart); 
-        }                              
-     },1);
-});       
-
-
+    goHome()
+});      
 
 function navigationMouse() {
    showMenu(); 
 }
 
+document.getElementById("wearBut").addEventListener("click", function(){
+    document.getElementById("checkWear").style.display = "block" 
+    document.getElementById("wearBut").className = "wearBut_clicked"   
+    document.getElementById("weatherBut").className = "weatherBut"       
+    document.getElementById("travelBut").className = "travelBut"    
+    document.getElementById("checkWeather").style.display = "none"
+    document.getElementById("checkTravel").style.display = "none"
+}); 
 
- document.getElementById("wearBut").addEventListener("click", function(){
-  
-document.getElementById("checkWeather").style.display = "none"
-document.getElementById("checkWear").style.display = "block" 
-document.getElementById("wearBut").className = "wearBut_clicked"
-document.getElementById("weatherBut").className = "weatherBut"       
+document.getElementById("weatherBut").addEventListener("click", function(){
+    document.getElementById("checkWeather").style.display = "block"
+    document.getElementById("weatherBut").className = "weatherBut_clicked"  
+    document.getElementById("wearBut").className = "wearBut"     
+    document.getElementById("travelBut").className = "travelBut"   
+    document.getElementById("checkWear").style.display = "none" 
+    document.getElementById("checkTravel").style.display = "none"
      
 }); 
 
- document.getElementById("weatherBut").addEventListener("click", function(){
-  
-document.getElementById("checkWeather").style.display = "block"
-document.getElementById("weatherBut").className = "weatherBut_clicked"
-document.getElementById("wearBut").className = "wearBut"     
-document.getElementById("checkWear").style.display = "none"     
-     
+document.getElementById("travelBut").addEventListener("click", function(){
+    document.getElementById("checkTravel").style.display = "block"
+    document.getElementById("travelBut").className = "travelBut_clicked"   
+    document.getElementById("wearBut").className = "wearBut"
+    document.getElementById("weatherBut").className = "weatherBut" 
+    document.getElementById("checkWear").style.display = "none"   
+    document.getElementById("checkWeather").style.display = "none"  
 }); 
 
 
