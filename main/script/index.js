@@ -120,7 +120,11 @@ document.getElementById("goWear_travel").addEventListener("click", function(){
     
  document.getElementById("goHomeArrow").addEventListener("click", function(){
     goHome()
-});      
+});   
+
+document.getElementById("logoDiv").addEventListener("click", function(){
+    goHome()
+}); 
 
 document.getElementById("wearBut").addEventListener("click", function(){
     document.getElementById("checkWear").style.display = "block" 
