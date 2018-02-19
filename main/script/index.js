@@ -50,7 +50,7 @@ function goNext(){
 
 function showMenu(){
     let m1 = document.getElementById("body_scroll").scrollTop;
-    let timer = null;
+    var timer = null;
     document.getElementById("navigation").style.top= 0;
     document.getElementById("navigation").style.transition = "top 1s";
     clearTimeout(timer) 
