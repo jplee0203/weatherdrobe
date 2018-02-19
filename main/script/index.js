@@ -1,6 +1,28 @@
-document.getElementById("body_scroll").onmousewheel = function(event){
- showMenu();   
-};
+var m1 = 0;   
+var m2 = 0;    
+var timer = null;
+var mOver = false;
+
+document.getElementById("body_scroll").onscroll = function(){
+    document.getElementById("navigation").style.top= 0;
+    document.getElementById("navigation").style.transition = "top 1s";
+    console.log("a " + m2);
+    console.log("b " + m1);
+    clearTimeout(timer) 
+    timer = setTimeout("Data()", 1000);
+    m1 = document.getElementById("body_scroll").scrollTop 
+}
+
+
+function Data(){
+   m2 = document.getElementById("body_scroll").scrollTop 
+   if(m2 == m1 && mOver != true){
+       setTimeout(function(){     
+          document.getElementById("navigation").style.top= "-10%";
+          document.getElementById("navigation").style.transition = "top 1s";
+    }, 5000); 
+   }
+}
 
 function goHome(){
     showMenu();  
@@ -27,24 +49,22 @@ function goNext(){
 }
 
 function showMenu(){
-    
- document.getElementById("navigation").style.top= 0;
- document.getElementById("navigation").style.transition = "top 1s";
-
-   setTimeout(function(){     
-      document.getElementById("navigation").style.top= "-10%";
- document.getElementById("navigation").style.transition = "top 1s";
-    }, 5000);      
-    
-    
+    let m1 = document.getElementById("body_scroll").scrollTop;
+    let timer = null;
+    document.getElementById("navigation").style.top= 0;
+    document.getElementById("navigation").style.transition = "top 1s";
+    clearTimeout(timer) 
+    timer = setTimeout("Data()", 1000);
 }
 
 function fixedMenu(){   
+ mOver = true;
  document.getElementById("navigation").style.top= 0;
  document.getElementById("navigation").style.transition = "top 1s";
 }
 
 function fixedMenuOut(){   
+ mOver = false;  
  document.getElementById("navigation").style.top= "-10%";
  document.getElementById("navigation").style.transition = "top 1s";
 }
