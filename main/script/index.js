@@ -1,7 +1,30 @@
 document.getElementById("body_scroll").onmousewheel = function(event){
- 
  showMenu();   
 };
+
+function goHome(){
+    showMenu();  
+    var scTop = document.getElementById("body_scroll").scrollTop;
+    var scStart = setInterval(function(){ 
+        scTop = scTop-15;   
+    document.getElementById("body_scroll").scrollTop = scTop;
+        if(scTop <= 0){   
+           clearInterval(scStart); 
+        }                              
+     },1);
+}
+
+function goNext(){
+  showMenu();  
+    var scTop = document.getElementById("body_scroll").scrollTop;
+    var scStart = setInterval(function(){ 
+        scTop = scTop+15;   
+    document.getElementById("body_scroll").scrollTop = scTop;
+        if(scTop > 2107.77783203125){   
+           clearInterval(scStart); 
+        }                              
+     },1);
+}
 
 function showMenu(){
     
@@ -16,6 +39,24 @@ function showMenu(){
     
 }
 
+function fixedMenu(){   
+ document.getElementById("navigation").style.top= 0;
+ document.getElementById("navigation").style.transition = "top 1s";
+}
+
+function fixedMenuOut(){   
+ document.getElementById("navigation").style.top= "-10%";
+ document.getElementById("navigation").style.transition = "top 1s";
+}
+
+function navigationMouseOut(){
+  fixedMenuOut();  
+}
+
+function navigationMouse() { 
+  fixedMenu();
+}
+
 
 document.getElementById("searchBut").addEventListener("click", function(){
     showMenu(); 
@@ -27,32 +68,19 @@ document.getElementById("searchBut").addEventListener("click", function(){
            clearInterval(scStart); 
         }                              
      },1);
-  });    
- document.getElementById("goWear").addEventListener("click", function(){
-    showMenu();  
-    var scTop = document.getElementById("body_scroll").scrollTop;
-    var scStart = setInterval(function(){ 
-        scTop = scTop+15;   
-    document.getElementById("body_scroll").scrollTop = scTop;
-        if(scTop > 2107.77783203125){   
-           clearInterval(scStart); 
-        }                              
-     },1);
-  
+  });   
+
+document.getElementById("goWear").addEventListener("click", function(){
+    goNext() 
 });  
 
 document.getElementById("goWear_wear").addEventListener("click", function(){
-    showMenu();  
-    var scTop = document.getElementById("body_scroll").scrollTop;
-    var scStart = setInterval(function(){ 
-        scTop = scTop+15;   
-    document.getElementById("body_scroll").scrollTop = scTop;
-        if(scTop > 2107.77783203125){   
-           clearInterval(scStart); 
-        }                              
-     },1);
-  
-});  
+    goNext()
+}); 
+
+document.getElementById("goWear_travel").addEventListener("click", function(){
+    goNext() 
+}); 
 
  document.getElementById("goTravel").addEventListener("click", function(){
     showMenu();  
@@ -67,52 +95,40 @@ document.getElementById("goWear_wear").addEventListener("click", function(){
 });  
     
  document.getElementById("goHome").addEventListener("click", function(){
-    showMenu();  
-    var scTop = document.getElementById("body_scroll").scrollTop;
-    var scStart = setInterval(function(){ 
-        scTop = scTop-15;   
-    document.getElementById("body_scroll").scrollTop = scTop;
-        if(scTop <= 0){   
-           clearInterval(scStart); 
-        }                              
-     },1);
+    goHome()
 }); 
     
  document.getElementById("goHomeArrow").addEventListener("click", function(){
-    showMenu();  
-    var scTop = document.getElementById("body_scroll").scrollTop;
-    var scStart = setInterval(function(){ 
-        scTop = scTop-15;   
-    document.getElementById("body_scroll").scrollTop = scTop;
-        if(scTop <= 0){   
-           clearInterval(scStart); 
-        }                              
-     },1);
-});       
+    goHome()
+});      
 
 
+document.getElementById("wearBut").addEventListener("click", function(){
+    document.getElementById("checkWear").style.display = "block" 
+    document.getElementById("wearBut").className = "wearBut_clicked"   
+    document.getElementById("weatherBut").className = "weatherBut"       
+    document.getElementById("travelBut").className = "travelBut"    
+    document.getElementById("checkWeather").style.display = "none"
+    document.getElementById("checkTravel").style.display = "none"
+}); 
 
-function navigationMouse() {
-   showMenu(); 
-}
-
-
- document.getElementById("wearBut").addEventListener("click", function(){
-  
-document.getElementById("checkWeather").style.display = "none"
-document.getElementById("checkWear").style.display = "block" 
-document.getElementById("wearBut").className = "wearBut_clicked"
-document.getElementById("weatherBut").className = "weatherBut"       
+document.getElementById("weatherBut").addEventListener("click", function(){
+    document.getElementById("checkWeather").style.display = "block"
+    document.getElementById("weatherBut").className = "weatherBut_clicked"  
+    document.getElementById("wearBut").className = "wearBut"     
+    document.getElementById("travelBut").className = "travelBut"   
+    document.getElementById("checkWear").style.display = "none" 
+    document.getElementById("checkTravel").style.display = "none"
      
 }); 
 
- document.getElementById("weatherBut").addEventListener("click", function(){
-  
-document.getElementById("checkWeather").style.display = "block"
-document.getElementById("weatherBut").className = "weatherBut_clicked"
-document.getElementById("wearBut").className = "wearBut"     
-document.getElementById("checkWear").style.display = "none"     
-     
+document.getElementById("travelBut").addEventListener("click", function(){
+    document.getElementById("checkTravel").style.display = "block"
+    document.getElementById("travelBut").className = "travelBut_clicked"   
+    document.getElementById("wearBut").className = "wearBut"
+    document.getElementById("weatherBut").className = "weatherBut" 
+    document.getElementById("checkWear").style.display = "none"   
+    document.getElementById("checkWeather").style.display = "none"  
 }); 
 
 
@@ -127,6 +143,7 @@ var map = document.getElementById("map");
             var country;
             var city;
             var weatherKey = "bbeb34ebf60ad50f7893e7440a1e2b0b";
+            var darkskyKey = "45fe937108f563b0b90ccc934b1e0006";
             
         
         
@@ -151,6 +168,7 @@ var map = document.getElementById("map");
                     console.log("long " + LatLng.lng);
                 //map.style.display = "block";
                 
+                console.log ("working here");
                 
                 initMap();           
             }    
@@ -230,17 +248,18 @@ var map = document.getElementById("map");
                 
                 console.log(results);
                 
+                
 
                 country = results[1].address_components[3].short_name;
                 
-                city = results[1].address_components[0].long_name;
+                city = results[0].address_components[3].long_name;
 
                 
                 var searchInp = document.getElementById("searchInp");
                 
                 searchInp.placeholder = "Current location is " + city;
                 
-                insertSearch();
+//                insertSearch();
                 
                 getWeather();
                 
@@ -258,13 +277,16 @@ var map = document.getElementById("map");
         //api.openweathermap.org/data/2.5/weather?lat=35&lon=139
         
         var xhttp_weather = new XMLHttpRequest();
-        xhttp_weather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&units=metric&APPID=" + weatherKey);
+        xhttp_weather.open("GET", "https://api.darksky.net/forecast/45fe937108f563b0b90ccc934b1e0006/" + LatLng.lat + "," + LatLng.lng);
         xhttp_weather.send();
+        
+        
         
         xhttp_weather.onreadystatechange = function(){
             if (this.readyState == 4 && this.status == 200){
                 var response = JSON.parse(this.responseText);
                 console.log(response);
+                
                 
                 current_condition = response.weather[0].main;
                 
@@ -288,8 +310,8 @@ var map = document.getElementById("map");
                 highTemp.innerHTML = high_temp;
                 lowTemp.innerHTML = low_temp;
                 
-                
-                insertWeather();
+               
+//                insertWeather();
                 
                 //country = results[0].address_components[4].short_name;
             }
