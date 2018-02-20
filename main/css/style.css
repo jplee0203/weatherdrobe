@@ -2,6 +2,11 @@
            overflow:hidden;  
           
         }
+
+button:focus {
+    outline:none;
+}
+
 @font-face{
     font-family: MyriadPro;  
     src: url(../fonts/Myriad/Myriad-Pro-Regular.ttf);
@@ -531,8 +536,21 @@
             z-index: 3;
 
         }     
+
+/* ---------------- checkTravel --------------------  */
+
+ #checkTravel{
+           position: absolute;
+           background-color:#ebebeb; 
+            top:18%;
+            width: 100%;
+            height: 16%;
+           display: none;  
+        }
               
- /* ---------------- header2 --------------------  */             .header2{ 
+ /* ---------------- header2 --------------------  */             
+
+.header2{ 
         
             position: absolute;
             top: 34%;
