@@ -328,8 +328,13 @@ var map = document.getElementById("map");
                     highTemp = document.getElementById("highTemp"),
                     lowTemp = document.getElementById("lowTemp"),
                     currentTemp = document.getElementById("currentTemp");
+      
+                desc.innerHTML = description;
+                currentTemp.innerHTML = current_temp;
+                highTemp.innerHTML = high_temp;
+                lowTemp.innerHTML = low_temp;
                 
-  if(current_condition === "Snow"){
+if(current_condition === "Snow"){
     current_conditionImg.style.backgroundImage = "url(https://png.icons8.com/metro/1600/snow.png)";
     checkWeather_img.style.backgroundImage = "url(https://png.icons8.com/metro/1600/snow.png)";
     home_containerImg.style.backgroundImage = "url(https://c1.staticflickr.com/6/5786/30797295081_52c5646db8_b.jpg)";
@@ -378,16 +383,10 @@ var map = document.getElementById("map");
     con.innerHTML = "";
 } else {
     con.innerHTML = current_condition;
-}    
-             
-             
-                desc.innerHTML = description;
-                currentTemp.innerHTML = current_temp;
-                highTemp.innerHTML = high_temp;
-                lowTemp.innerHTML = low_temp;
+}         
                 
                 
-//                insertWeather();
+                 //insertWeather();
                 
                 //country = results[0].address_components[4].short_name;
             }
