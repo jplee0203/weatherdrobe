@@ -1,15 +1,34 @@
 
+var m1 = 0;   
+var m2 = 0;    
+var timer = null;
+var mOver = false;
 var current_conditionImg = document.getElementById("temperImg1");
 var checkWeather_img = document.getElementById("checkWeather_img");
 var home_containerImg = document.getElementById("home_container");
 var header2_img = document.getElementById("header2");
 
+document.getElementById("body_scroll").onscroll = function(){
+    document.getElementById("navigation").style.top= 0;
+    document.getElementById("navigation").style.transition = "top 1s";
+    clearTimeout(timer) 
+    timer = setTimeout("Data()", 1000);
+    m1 = document.getElementById("body_scroll").scrollTop 
+}
+
+
+function Data(){
+   m2 = document.getElementById("body_scroll").scrollTop 
+   if(m2 == m1 && mOver != true){
+       setTimeout(function(){     
+          document.getElementById("navigation").style.top= "-10%";
+          document.getElementById("navigation").style.transition = "top 1s";
+    }, 5000); 
+   }
+}
 
 
 
-document.getElementById("body_scroll").onmousewheel = function(event){
- showMenu();   
-};
 
 
 
@@ -38,24 +57,22 @@ function goNext(){
 }
 
 function showMenu(){
-    
- document.getElementById("navigation").style.top= 0;
- document.getElementById("navigation").style.transition = "top 1s";
-
-   setTimeout(function(){     
-      document.getElementById("navigation").style.top= "-10%";
- document.getElementById("navigation").style.transition = "top 1s";
-    }, 5000);      
-    
-    
+    let m1 = document.getElementById("body_scroll").scrollTop;
+    var timer = null;
+    document.getElementById("navigation").style.top= 0;
+    document.getElementById("navigation").style.transition = "top 1s";
+    clearTimeout(timer) 
+    timer = setTimeout("Data()", 1000);
 }
 
-function fixedMenu(){   
+function fixedMenu(){  
+ mOver = true;    
  document.getElementById("navigation").style.top= 0;
  document.getElementById("navigation").style.transition = "top 1s";
 }
 
-function fixedMenuOut(){   
+function fixedMenuOut(){ 
+ mOver = false;    
  document.getElementById("navigation").style.top= "-10%";
  document.getElementById("navigation").style.transition = "top 1s";
 }
@@ -111,8 +128,7 @@ document.getElementById("goWear_travel").addEventListener("click", function(){
     
  document.getElementById("goHomeArrow").addEventListener("click", function(){
     goHome()
-});      
-
+});
 
 document.getElementById("wearBut").addEventListener("click", function(){
     document.getElementById("checkWear").style.display = "block" 
