@@ -4,6 +4,9 @@ var checkWeather_img = document.getElementById("checkWeather_img");
 var home_containerImg = document.getElementById("home_container");
 var header2_img = document.getElementById("header2");
 
+
+
+
 var map = document.getElementById("map");
             
             var LatLng = {
@@ -183,49 +186,49 @@ var map = document.getElementById("map");
                 
                 //ben//               
 if(current_condition === "Snow"){
-    current_conditionImg.style.backgroundImage = "url(https://png.icons8.com/metro/1600/snow.png)";
-    checkWeather_img.style.backgroundImage = "url(https://png.icons8.com/metro/1600/snow.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/snow.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/snow-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://c1.staticflickr.com/6/5786/30797295081_52c5646db8_b.jpg)";
     header2_img.style.backgroundImage = "url(https://cdn.pixabay.com/photo/2017/12/09/16/41/snow-man-3008179_1280.jpg)";
     con.innerHTML = "";
     
 } else if(current_condition === "Thunderstorm"){
-    current_conditionImg.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/428-200.png)";
-    checkWeather_img.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/428-200.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/thunderstorm.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/thunderstorm-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://coclouds.com/wp-content/uploads/2014/11/distant-thunderstorm-sunny-evening-2014-08-06.jpg)";
     header2_img.style.backgroundImage = "url(https://images.pexels.com/photos/268782/pexels-photo-268782.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb)";
     con.innerHTML = "";
     
 } else if(current_condition === "Drizzle"){
-    current_conditionImg.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/12058-200.png)";
-    checkWeather_img.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/12058-200.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/shower.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/shower-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://c.pxhere.com/photos/8b/3c/fog_morning_sunrise_mood_landscape_meadow_tree-751186.jpg!d)";
     header2_img.style.backgroundImage = "url(https://www.publicdomainpictures.net/pictures/160000/velka/gouttes-de-pluie-sur-vitrage.jpg)";
     con.innerHTML = "";
     
 } else if(current_condition === "Rain"){
-    current_conditionImg.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/75093-200.png)";
-    checkWeather_img.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/75093-200.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/rain.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/rain-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://www.publicdomainpictures.net/pictures/70000/velka/view-to-rain-from-wooden-veranda.jpg)";
     header2_img.style.backgroundImage = "url(https://static.pexels.com/photos/110874/pexels-photo-110874.jpeg)";
     con.innerHTML = "";
     
-} else if(current_condition === "Atmosphere"){
-    current_conditionImg.style.backgroundImage = "url(https://cdn2.iconfinder.com/data/icons/couds/512/cloud_12-512.png)";
-    checkWeather_img.style.backgroundImage = "url(https://cdn2.iconfinder.com/data/icons/couds/512/cloud_12-512.png)";
+} else if(current_condition === "Mist" || current_condition === "Smoke" || current_condition === "Haze" || current_condition === "Sand, dust whirls" || current_condition === "Fog" || current_condition === "Sand" || current_condition === "Dust" || current_condition === "Volcanic ash" || current_condition === "Squalls" || current_condition === "Tornado"){
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/en/c/c1/December_Fog_01_edit_Fcb981.jpg)";
     header2_img.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/4/4b/Marine_Fog_Pattern_1_crop.jpg)";
     con.innerHTML = "";
 } else if(current_condition === "Clear"){
-    current_conditionImg.style.backgroundImage = "url(https://cdn.onlinewebfonts.com/svg/img_7184.png)";
-    checkWeather_img.style.backgroundImage = "url(https://cdn.onlinewebfonts.com/svg/img_7184.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg)";
     header2_img.style.backgroundImage = "url(https://static.pexels.com/photos/3768/sky-sunny-clouds-cloudy.jpg)";
     con.innerHTML = "";
    
 } else if(current_condition === "Clouds"){
-    current_conditionImg.style.backgroundImage = "url(https://png.icons8.com/metro/1600/clouds.png)";
-    checkWeather_img.style.backgroundImage = "url(https://png.icons8.com/metro/1600/clouds.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/scattered-clouds.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/scattered-clouds-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://static.pexels.com/photos/19670/pexels-photo.jpg)";
     header2_img.style.backgroundImage = "url(https://pixnio.com/free-images/2017/02/22/2017-02-22-14-21-18-900x600.jpg)";
     con.innerHTML = "";
@@ -300,49 +303,49 @@ if(current_condition === "Snow"){
                 
                 //ben//               
 if(current_condition === "Snow"){
-    current_conditionImg.style.backgroundImage = "url(https://png.icons8.com/metro/1600/snow.png)";
-    checkWeather_img.style.backgroundImage = "url(https://png.icons8.com/metro/1600/snow.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/snow.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/snow-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://c1.staticflickr.com/6/5786/30797295081_52c5646db8_b.jpg)";
     header2_img.style.backgroundImage = "url(https://cdn.pixabay.com/photo/2017/12/09/16/41/snow-man-3008179_1280.jpg)";
     con.innerHTML = "";
     
 } else if(current_condition === "Thunderstorm"){
-    current_conditionImg.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/428-200.png)";
-    checkWeather_img.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/428-200.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/thunderstorm.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/thunderstorm-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://coclouds.com/wp-content/uploads/2014/11/distant-thunderstorm-sunny-evening-2014-08-06.jpg)";
     header2_img.style.backgroundImage = "url(https://images.pexels.com/photos/268782/pexels-photo-268782.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb)";
     con.innerHTML = "";
     
 } else if(current_condition === "Drizzle"){
-    current_conditionImg.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/12058-200.png)";
-    checkWeather_img.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/12058-200.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/shower.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/shower-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://c.pxhere.com/photos/8b/3c/fog_morning_sunrise_mood_landscape_meadow_tree-751186.jpg!d)";
     header2_img.style.backgroundImage = "url(https://www.publicdomainpictures.net/pictures/160000/velka/gouttes-de-pluie-sur-vitrage.jpg)";
     con.innerHTML = "";
     
 } else if(current_condition === "Rain"){
-    current_conditionImg.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/75093-200.png)";
-    checkWeather_img.style.backgroundImage = "url(https://d30y9cdsu7xlg0.cloudfront.net/png/75093-200.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/rain.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/rain-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://www.publicdomainpictures.net/pictures/70000/velka/view-to-rain-from-wooden-veranda.jpg)";
     header2_img.style.backgroundImage = "url(https://static.pexels.com/photos/110874/pexels-photo-110874.jpeg)";
     con.innerHTML = "";
     
-} else if(current_condition === "Atmosphere"){
-    current_conditionImg.style.backgroundImage = "url(https://cdn2.iconfinder.com/data/icons/couds/512/cloud_12-512.png)";
-    checkWeather_img.style.backgroundImage = "url(https://cdn2.iconfinder.com/data/icons/couds/512/cloud_12-512.png)";
+} else if(current_condition === "Mist" || current_condition === "Smoke" || current_condition === "Haze" || current_condition === "Sand, dust whirls" || current_condition === "Fog" || current_condition === "Sand" || current_condition === "Dust" || current_condition === "Volcanic ash" || current_condition === "Squalls" || current_condition === "Tornado"){
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/en/c/c1/December_Fog_01_edit_Fcb981.jpg)";
     header2_img.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/4/4b/Marine_Fog_Pattern_1_crop.jpg)";
     con.innerHTML = "";
 } else if(current_condition === "Clear"){
-    current_conditionImg.style.backgroundImage = "url(https://cdn.onlinewebfonts.com/svg/img_7184.png)";
-    checkWeather_img.style.backgroundImage = "url(https://cdn.onlinewebfonts.com/svg/img_7184.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg)";
     header2_img.style.backgroundImage = "url(https://static.pexels.com/photos/3768/sky-sunny-clouds-cloudy.jpg)";
     con.innerHTML = "";
    
 } else if(current_condition === "Clouds"){
-    current_conditionImg.style.backgroundImage = "url(https://png.icons8.com/metro/1600/clouds.png)";
-    checkWeather_img.style.backgroundImage = "url(https://png.icons8.com/metro/1600/clouds.png)";
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/scattered-clouds.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/scattered-clouds-text.svg')";
     home_containerImg.style.backgroundImage = "url(https://static.pexels.com/photos/19670/pexels-photo.jpg)";
     header2_img.style.backgroundImage = "url(https://pixnio.com/free-images/2017/02/22/2017-02-22-14-21-18-900x600.jpg)";
     con.innerHTML = "";

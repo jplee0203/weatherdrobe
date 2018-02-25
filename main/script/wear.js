@@ -100,14 +100,14 @@
     	    var criterionTemp = getCriterionTemp();
 
     	    console.log(criterionTemp);
-    	    
+//if <10   
     	    var addParams = "";
     	    if (criterionTemp < 10 ) {
     	    	    addParams = "+sweater";
-    	    	    
+ // >10   	    	    
     	    } else {
                   addParams = "+shirt";
-                
+// <20 && >10               
     	    	  if(criterionTemp < 20) {
     	    		  addParams = "+longsleeve"; 
                       console.log("매롱");
@@ -115,11 +115,11 @@
     	    	
     	    	  
     	    }
-    	    
+    //if Rain	    
     	    var addParamsWeather = "";
     	    if (currentWeather == "Rain") {
     	    	    addParamsWeather = "+rain";
-    	    	    
+   //if Snow	    	    
     	    } else if (currentWeather == "Snow") {
     	    	    addParamsWeather = "+snow";
     	    	    
@@ -140,12 +140,17 @@
 	    
 //	    currentHour = currentHour - 7;  //test code
 	    
+        
+// h > 14 chold        
 	    if (currentHour > 14) {
 	    	    return minTemp;
 	    }
-	    
+// night	    
 	    if (currentHour < 11) {
 	    	    var tempDifference = maxTemp - currentTemp;
+            
+            
+// similar to night            
 	    	    if (tempDifference > 5) {
 	    	    	    return currentTemp;
 	    	    }
