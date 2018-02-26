@@ -25,14 +25,14 @@
     
     
     
-<div class="home_container">
+<div class="home_container" id="home_container">
      <div class="navigationMouseover" onmouseover="navigationMouse()"></div>
      <div class="navigation" id="navigation" onmouseover="navigationMouse()" onmouseout="navigationMouseOut()"> 
-      <div class="logoDiv"></div>  
+      <div class="logoDiv" id="logoDiv"></div>  
       <div class="menuDiv">
         <button class="homeBut" id="goHome">HOME</button>
         <button class="settingBut">SETTING</button>
-        <button class="aboutBut">ABOUT</button>
+          <a href="about.html"> <button class="aboutBut">ABOUT</button></a>
       </div>   
      </div> 
       
@@ -56,7 +56,7 @@
     
 <div class="checkWeather" id="checkWeather"> 
 
-   <div class="checkWeather_img">
+   <div class="checkWeather_img" id="checkWeather_img">
 
    </div> 
 
@@ -65,28 +65,28 @@
        <div id="temperDiv1" class="temper">
             <div id="temperImg1"></div>
             <p class="temperP">Current Condition</p> 
-            <p id="con" class="temperNum">19</p>
+            <p id="con" class="temperNum">loading</p>
        </div>
 
        <div id="temperDiv2" class="temper">
             <div id="temperImg2"></div>
             <p class="temperP">Description</p> 
-            <p id="desc" class="temperNum">19</p>
+            <p id="desc" class="temperNum">loading</p>
        </div>
 
        <div id="temperDiv3" class="temper">
             <p class="temperP">Current Temperature</p>
-            <p id="currentTemp" class="temperNum">19</p>
+            <p id="currentTemp" class="temperNum">loading</p>
        </div>
 
        <div id="temperDiv4" class="temper">
             <p class="temperP">High Temperature</p>
-            <p id="highTemp" class="temperNum">23</p>
+            <p id="highTemp" class="temperNum">loading</p>
        </div>
 
        <div id="temperDiv5" class="temper">
             <p class="temperP">Low Temperature</p>
-            <p id="lowTemp" class="temperNum">18</p>   
+            <p id="lowTemp" class="temperNum">loading</p>   
        </div>
    </div>  
     
@@ -135,7 +135,7 @@
      <div class="downArrow" id="goWear_travel"></div>
 </div>     
 
-<div class="header2">    
+<div class="header2" id="header2">    
      <div class="header2_buts">  
           <button class="weatherBut_clicked" id="weatherBut">Weather</button>
           <button class="wearBut" id="wearBut">Wear</button>

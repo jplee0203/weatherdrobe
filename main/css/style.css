@@ -1,6 +1,5 @@
        body{
            overflow:hidden;  
-          
         }
 
 button:focus {
@@ -40,8 +39,9 @@ button:focus {
             background-color:#003E6B;
             width: 100%;
             height: 100%;
+          
             overflow: auto;
-            
+           
             
         }    
         
@@ -49,15 +49,17 @@ button:focus {
             position: absolute;
             top: 0;
             left: 0;
+            right: 0;
+            margin: auto;
             background-color:#003E6B;
-            width: 100%;
+            width: 980px;
             height: 5000px;
         }
         .home_container{
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg);
+            background-image: url(../img/backgrounds/Bg1.jpeg);
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
@@ -102,7 +104,7 @@ button:focus {
             right: 0;
             bottom: 0;
             text-align: center;
-            font-size: 70px;
+            font-size: 45px;
             margin: auto;     
             
             
@@ -168,23 +170,28 @@ button:focus {
         
 /* ---------------- navigation --------------------  */
          .navigationMouseover {  
-           position:fixed;
-            left: 0px;
+            position:fixed;  
+            margin:0 auto;  
+            left:auto;  
+            right:auto; 
             top: 0px;
-             width: 100%;
+            margin: auto;
+            width: 980px;
             height: 10%;
             opacity: 0;
-             float: left;
-             z-index: 990;
+            float: left;
+            z-index: 990;
         }
         
         
          .navigation {
              
-           position:fixed;
-            left: 0px;
+            position:fixed;  
+            margin:0 auto;  
+            left:auto;  
+            right:auto; 
             top: -10%;
-             width: 100%;
+            width: 980px;
             height: 10%;
             background: rgba(255, 255, 255, 0.8);
              float: left;
@@ -287,7 +294,70 @@ button:focus {
             background-color: #e0f4ec;
             color: black;
               
-         }    
+         }
+
+
+/* ---------------- aboutPage ------------------  */
+#about-div {
+          text-align: center;
+          font-size: 16pt; 
+          background-color: rgba(210, 210, 210, 0.5);
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 35px;
+          padding-bottom: 20px;
+          width: 97%;
+          height: 40%;
+          margin-top: 10px;
+          -moz-border-radius: 7px;
+          -webkit-border-radius: 7px;
+            font-family: MyriadPro;
+    
+        }
+#about_title {
+    text-align: center;
+    font-size: 45pt;
+    font-family: MontserratRegular;
+   
+    
+}
+#div-main {
+            
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg);
+    background-size: cover;
+            animation: fade 1s;
+    
+        }
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#aboutClose  {font-family: MontserratRegular;
+            position: absolute;
+            right: 0px;
+            left: 0px;
+            top: 55%;
+            margin:auto;
+            width: 20%;
+            height: 3%;
+            background-color: #3b455f;
+             color: #ebebeb;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            z-index: 2;
+        }
+
+
 /* ---------------- header1 --------------------  */ 
               
               
@@ -450,8 +520,8 @@ button:focus {
             width: 25%;
             height: 40%;
           
-                background-image: url(../img/rainCoin.png);
-               background-size: cover;
+                background-image: url(../img/logo2.png);
+               background-size:contain;
             background-repeat: no-repeat;   
         }
     
@@ -517,8 +587,8 @@ button:focus {
         }
         #temperImg2{
             position: absolute;
-            
-            background-image: /* url(https://daks2k3a4ib2z.cloudfront.net/588249220800d83a0710ac2b/5a05c7a212148e000158d7a9_cloud-computing-icon-pivotal-it.svg); */
+           background-size:contain;
+            background-repeat: no-repeat;
             width: 50px;
             height: 50px;
             bottom:10px;
@@ -527,8 +597,9 @@ button:focus {
         }
         #temperImg1{
             position: absolute;
-            
-           /* background-image: url(https://image.flaticon.com/icons/svg/146/146204.svg); */
+           
+           background-size:contain;
+            background-repeat: no-repeat;
             width: 50px;
             height: 50px;
             bottom:10px;
@@ -558,7 +629,7 @@ button:focus {
             background-color: white;
             width: 100%;
             height: 8%;
-     background-image: url(https://static.pexels.com/photos/110874/pexels-photo-110874.jpeg);
+     background-image: url(../img/backgrounds/Bg2.jpg);
      background-size: cover;
      background-repeat: no-repeat;
         }     
