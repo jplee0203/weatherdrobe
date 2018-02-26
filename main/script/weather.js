@@ -214,11 +214,35 @@ if(current_condition === "Snow"){
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Rain2.jpeg')";
     con.innerHTML = "";
     
-} else if(current_condition === "Mist" || current_condition === "Smoke" || current_condition === "Haze" || current_condition === "Sand, dust whirls" || current_condition === "Fog" || current_condition === "Sand" || current_condition === "Dust" || current_condition === "Volcanic ash" || current_condition === "Squalls" || current_condition === "Tornado"){
+}else if(current_condition === "Mist" || current_condition === "Fog"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Haze1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Haze2.jpg')";
+    con.innerHTML = "";
+} else if( current_condition === "Smoke" || current_condition === "Haze"){
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
+    home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Smoke1.jpg')";
+    header2_img.style.backgroundImage = "URL('./img/backgrounds/Smoke2.jpg')";
+    con.innerHTML = "";
+} else if(current_condition === "Sand, dust whirls" || current_condition === "Sand" || current_condition === "Dust"){
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
+    home_containerImg.style.backgroundImage = "URL('./img/WeatherIcon/Sand1.jpg')";
+    header2_img.style.backgroundImage = "URL('./img/WeatherIcon/Sand2.jpg')";
+    con.innerHTML = "";
+} else if(current_condition === "Volcanic ash"){
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
+    home_containerImg.style.backgroundImage =  "URL('./img/WeatherIcon/VolcanicAsh1.jpg')";
+    header2_img.style.backgroundImage =  "URL('./img/WeatherIcon/VolcanicAsh2.jpg')";
+    con.innerHTML = "";
+} else if(current_condition === "Squalls" || current_condition === "Tornado"){
+     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
+    home_containerImg.style.backgroundImage =  "URL('./img/WeatherIcon/Tornado1.jpg')";
+    header2_img.style.backgroundImage =  "URL('./img/WeatherIcon/Tornado2.jpg')";
     con.innerHTML = "";
 } else if(current_condition === "Clear"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky.svg')";
@@ -331,11 +355,35 @@ if(current_condition === "Snow"){
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Rain2.jpeg')";
     con.innerHTML = "";
     
-} else if(current_condition === "Mist" || current_condition === "Smoke" || current_condition === "Haze" || current_condition === "Sand, dust whirls" || current_condition === "Fog" || current_condition === "Sand" || current_condition === "Dust" || current_condition === "Volcanic ash" || current_condition === "Squalls" || current_condition === "Tornado"){
+}else if(current_condition === "Mist" || current_condition === "Fog"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Haze1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Haze2.jpg')";
+    con.innerHTML = "";
+} else if( current_condition === "Smoke" || current_condition === "Haze"){
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
+    home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Smoke1.jpg')";
+    header2_img.style.backgroundImage = "URL('./img/backgrounds/Smoke2.jpg')";
+    con.innerHTML = "";
+} else if(current_condition === "Sand, dust whirls" || current_condition === "Sand" || current_condition === "Dust"){
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
+    home_containerImg.style.backgroundImage = "URL('./img/WeatherIcon/Sand1.jpg')";
+    header2_img.style.backgroundImage = "URL('./img/WeatherIcon/Sand2.jpg')";
+    con.innerHTML = "";
+} else if(current_condition === "Volcanic ash"){
+    current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
+    home_containerImg.style.backgroundImage =  "URL('./img/WeatherIcon/VolcanicAsh1.jpg')";
+    header2_img.style.backgroundImage =  "URL('./img/WeatherIcon/VolcanicAsh2.jpg')";
+    con.innerHTML = "";
+} else if(current_condition === "Squalls" || current_condition === "Tornado"){
+     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
+    checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
+    home_containerImg.style.backgroundImage =  "URL('./img/WeatherIcon/Tornado1.jpg')";
+    header2_img.style.backgroundImage =  "URL('./img/WeatherIcon/Tornado2.jpg')";
     con.innerHTML = "";
 } else if(current_condition === "Clear"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky.svg')";

@@ -1289,3 +1289,121 @@ button:focus {
             background-size: cover;
             background-repeat: no-repeat;
         }
+
+/* ---------------- Travel Tab --------------------  */
+
+        #map {
+        height: 60%;
+        width: 60%;
+        position: absolute;
+        top: 10%;
+        left: 3%;
+      }
+
+        #resultDiv {
+            
+            width: 30%;
+            height: 60%;
+            position:absolute;
+            top: 10%;
+            right: 3%;
+        }
+        
+        #poiDiv {
+            border: 2px solid black;
+            width: 100%;
+            height: 20%;
+            
+        }
+        
+        #poiDiv:hover {
+            background-color:aqua;
+        }
+    
+        @keyframes hoverAnimate {
+            
+        }
+
+
+
+@media only screen and (max-device-width:1024px) {
+.weatherDrobe_container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color:#003E6B;
+            width: 100%;
+            height: 5000px;
+        }
+.navigationMouseover {  
+            position:fixed;  
+            margin:0 auto;  
+            left:auto;  
+            right:auto; 
+            top: 0px;
+            margin: auto;
+            width: 100%;
+            height: 10%;
+            opacity: 0;
+            float: left;
+            z-index: 990;
+        }
+        
+        
+ .navigation {
+
+     position:fixed;  
+     margin:0 auto;  
+     left:auto;  
+     right:auto; 
+     top: -10%;
+     width: 100%;
+     height: 10%;
+     background: rgba(255, 255, 255, 0.8);
+     float: left;
+     z-index: 999;
+}
+}
+
+@media screen and (orientation:landscape) {
+.weatherDrobe_container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color:#003E6B;
+            width: 980px;
+            height: 5000px;
+        }
+.navigationMouseover {  
+            position:fixed;  
+            margin:0 auto;  
+            left:auto;  
+            right:auto; 
+            top: 0px;
+            margin: auto;
+            width: 980px;
+            height: 10%;
+            opacity: 0;
+            float: left;
+            z-index: 990;
+        }
+        
+        
+ .navigation {
+
+     position:fixed;  
+     margin:0 auto;  
+     left:auto;  
+     right:auto; 
+     top: -10%;
+     width: 980px;
+     height: 10%;
+     background: rgba(255, 255, 255, 0.8);
+     float: left;
+     z-index: 999;
+}
+}

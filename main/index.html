@@ -132,6 +132,11 @@
 </div>     
     
 <div id="checkTravel">
+    
+    <div id="map"></div>
+  
+    <div id="resultDiv"></div>
+    
      <div class="downArrow" id="goWear_travel"></div>
 </div>     
 
@@ -256,10 +261,14 @@
 <script src="script/index.js"></script>
 <script src="script/weather.js"></script>
 <script src="script/wear.js"></script>
+<script src="script/place.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script async defer
+    
+    
+<!--<script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlQCrZOdG7hScwu2caGsEjhabuVYzMxy8&callback=initMap">
-    </script>    
-
+    </script>-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlQCrZOdG7hScwu2caGsEjhabuVYzMxy8&libraries=places&callback=initPlacesMap"
+        async defer></script> 
     
 </html>
