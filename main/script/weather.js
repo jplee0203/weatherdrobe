@@ -4,6 +4,80 @@ var checkWeather_img = document.getElementById("checkWeather_img");
 var home_containerImg = document.getElementById("home_container");
 var header2_img = document.getElementById("header2");
 
+var hatIcon = document.getElementById("hatIcon");
+var shirtIcon = document.getElementById("shirtIcon");
+var pantsIcon = document.getElementById("pantsIcon");
+var shoesIcon = document.getElementById("shoesIcon");
+var accessoriesIcon = document.getElementById("accessoriesIcon");
+
+var hatP = document.getElementById("hatP");
+var shirtP = document.getElementById("shirtP");
+var pantsP = document.getElementById("pantsP");
+var shoesP = document.getElementById("shoesP");
+var accessoriesP = document.getElementById("accessoriesP");
+var wearDiv1 = document.getElementById("wearDiv1");
+
+function umbrellaWeather(){
+   wearDiv1.style.display = "block"; 
+   hatIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
+   hatP.innerHTML = "Outerwear";    
+                 
+   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
+   shirtP.innerHTML = "Shirt";
+                  
+   pantsIcon.style.backgroundImage = "URL('./img/wearIcon/pants.png')";
+   pantsP.innerHTML = "Pants";
+               
+   shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+   shoesP.innerHTML = "Shoes";
+            
+   accessoriesIcon.style.backgroundImage = "URL('./img/wearIcon/umbrella.png')";
+   accessoriesP.innerHTML = "Umbrella";
+             
+}
+
+function coldWeather(){
+   wearDiv1.style.display = "block";
+    
+   hatIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
+   hatP.innerHTML = "Outerwear";    
+                 
+   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/sweater.png')";
+   shirtP.innerHTML = "Sweater";
+                  
+   pantsIcon.style.backgroundImage = "URL('./img/wearIcon/pants.png')";
+   pantsP.innerHTML = "Pants";
+               
+   shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+   shoesP.innerHTML = "Shoes";
+            
+   accessoriesIcon.style.backgroundImage = "URL('./img/wearIcon/accessories.png')";
+   accessoriesP.innerHTML = "Accessories";
+             
+}
+
+function hotWeather(){
+   wearDiv1.style.display = "none";   
+                 
+   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
+   shirtP.innerHTML = "Shirt";
+                  
+   pantsIcon.style.backgroundImage = "URL('./img/wearIcon/bottomwear-shorts-man.png')";
+   pantsP.innerHTML = "Bottomwear";
+               
+   shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+   shoesP.innerHTML = "Shoes";
+            
+   accessoriesIcon.style.backgroundImage = "URL('./img/wearIcon/accessories.png')";
+   accessoriesP.innerHTML = "Accessories";
+             
+}
+
+
+
+
+//current_temp
+
 
 
 
@@ -184,14 +258,24 @@ var map = document.getElementById("map");
                 
                                 
                 
-        //Weather Background Header//  
-                
+//Weather Background Header// 
+function FollowTempWear(){
+  if(current_temp < 10){
+   coldWeather();
+  } else if (current_temp > 20) {
+   hotWeather();   
+  } else if (current_temp < 20 && current_temp > 10) {
+   coldWeather();     
+  }         
+}                
+                            
 if(current_condition === "Snow"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/snow.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/snow-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Snow1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Snow2.jpg')";
     con.innerHTML = "";
+    umbrellaWeather();  
     
 } else if(current_condition === "Thunderstorm"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/thunderstorm.svg')";
@@ -199,13 +283,15 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Thunderstorm1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Thundestorm.jpeg')";
     con.innerHTML = "";
-    
+    umbrellaWeather(); 
+   
 } else if(current_condition === "Drizzle"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/shower.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/shower-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Drizzle1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Drizzle2.jpg')";
     con.innerHTML = "";
+    umbrellaWeather(); 
     
 } else if(current_condition === "Rain"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/rain.svg')";
@@ -213,6 +299,7 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Rain1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Rain2.jpeg')";
     con.innerHTML = "";
+    umbrellaWeather(); 
     
 }else if(current_condition === "Mist" || current_condition === "Fog"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -220,36 +307,47 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Haze1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Haze2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if( current_condition === "Smoke" || current_condition === "Haze"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Smoke1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Smoke2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if(current_condition === "Sand, dust whirls" || current_condition === "Sand" || current_condition === "Dust"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/WeatherIcon/Sand1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/WeatherIcon/Sand2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if(current_condition === "Volcanic ash"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage =  "URL('./img/WeatherIcon/VolcanicAsh1.jpg')";
     header2_img.style.backgroundImage =  "URL('./img/WeatherIcon/VolcanicAsh2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if(current_condition === "Squalls" || current_condition === "Tornado"){
      current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage =  "URL('./img/WeatherIcon/Tornado1.jpg')";
     header2_img.style.backgroundImage =  "URL('./img/WeatherIcon/Tornado2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if(current_condition === "Clear"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Clear1.jpeg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Clear2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
    
 } else if(current_condition === "Clouds"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/scattered-clouds.svg')";
@@ -257,9 +355,14 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Clouds1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Clouds2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else {
+    FollowTempWear();
     con.innerHTML = current_condition;
 } 
+// End               
+                
 //                insertWeather();
                 
                 //country = results[0].address_components[4].short_name;
@@ -267,7 +370,9 @@ if(current_condition === "Snow"){
         }    
         
     }  
-        
+  
+
+
  function readWeather(){
 //        var request;
 //        
@@ -326,13 +431,24 @@ if(current_condition === "Snow"){
                 highTemp.innerHTML = high_temp;
                 lowTemp.innerHTML = low_temp;
                 
-                //Weather Background Footer//               
+//Weather Background Footer// 
+function FollowTempWear(){
+  if(current_temp < 10){
+   coldWeather();
+  } else if (current_temp > 20) {
+   hotWeather();   
+  } else if (current_temp < 20 && current_temp > 10) {
+   coldWeather();     
+  }         
+}                
+                            
 if(current_condition === "Snow"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/snow.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/snow-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Snow1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Snow2.jpg')";
     con.innerHTML = "";
+    umbrellaWeather();  
     
 } else if(current_condition === "Thunderstorm"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/thunderstorm.svg')";
@@ -340,13 +456,15 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Thunderstorm1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Thundestorm.jpeg')";
     con.innerHTML = "";
-    
+    umbrellaWeather(); 
+   
 } else if(current_condition === "Drizzle"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/shower.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/shower-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Drizzle1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Drizzle2.jpg')";
     con.innerHTML = "";
+    umbrellaWeather(); 
     
 } else if(current_condition === "Rain"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/rain.svg')";
@@ -354,6 +472,7 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Rain1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Rain2.jpeg')";
     con.innerHTML = "";
+    umbrellaWeather(); 
     
 }else if(current_condition === "Mist" || current_condition === "Fog"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -361,36 +480,47 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Haze1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Haze2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if( current_condition === "Smoke" || current_condition === "Haze"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Smoke1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Smoke2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if(current_condition === "Sand, dust whirls" || current_condition === "Sand" || current_condition === "Dust"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/WeatherIcon/Sand1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/WeatherIcon/Sand2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if(current_condition === "Volcanic ash"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage =  "URL('./img/WeatherIcon/VolcanicAsh1.jpg')";
     header2_img.style.backgroundImage =  "URL('./img/WeatherIcon/VolcanicAsh2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if(current_condition === "Squalls" || current_condition === "Tornado"){
      current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/mist-text.svg')";
     home_containerImg.style.backgroundImage =  "URL('./img/WeatherIcon/Tornado1.jpg')";
     header2_img.style.backgroundImage =  "URL('./img/WeatherIcon/Tornado2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else if(current_condition === "Clear"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Clear1.jpeg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Clear2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
    
 } else if(current_condition === "Clouds"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/scattered-clouds.svg')";
@@ -398,9 +528,17 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Clouds1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Clouds2.jpg')";
     con.innerHTML = "";
+    FollowTempWear();
+    
 } else {
+    FollowTempWear();
     con.innerHTML = current_condition;
 } 
+// End     
+   
+                
+                
+                
                 
 //                insertWeather();
                 
