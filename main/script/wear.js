@@ -44,7 +44,7 @@
     
     function putOnHat() {
         
-        var addParams = "&fts=hat" + weatherParametersClassifier();
+        var addParams = "&fts=outerwear" + weatherParametersClassifier();
     	    var returnData = requestToShopstyle(addParams);
     	    window.open(returnData.responseJSON.products[0].clickUrl);
     }
@@ -72,7 +72,7 @@
 
     function putOnAccessories() {
         
-        var addParams = "&fts=umbrella" + weatherParametersClassifier();
+        var addParams = "&fts=umbrellas" + weatherParametersClassifier();
     	    var returnData = requestToShopstyle(addParams);
     	    window.open(returnData.responseJSON.products[0].clickUrl);
     }

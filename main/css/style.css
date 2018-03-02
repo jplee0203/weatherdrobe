@@ -296,38 +296,75 @@ button:focus {
               
          }
 
-
 /* ---------------- aboutPage ------------------  */
 #about-div {
-          text-align: center;
-          font-size: 16pt; 
-          background-color: rgba(210, 210, 210, 0.5);
-          padding-left: 15px;
-          padding-right: 15px;
-          padding-top: 35px;
-          padding-bottom: 20px;
-          width: 97%;
-          height: 40%;
-          margin-top: 10px;
-          -moz-border-radius: 7px;
-          -webkit-border-radius: 7px;
+          position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 55%;
             font-family: MyriadPro;
     
         }
-#about_title {
-    text-align: center;
+
+#main_img2{
+width: 300px; 
+    float: right; 
+    opacity: 0.7;
+    margin-right: 25%; 
+    border-radius: 30%; 
+    
+   
+}
+
+#inner_header{
+    position: absolute;
+            top: 55%;
+            left: 0;
+            background-color: rgba(240,240,240, 0.9);
+            width: 100%;
+            height: 230%;
+            font-family: MontserratRegular;
+}
+#about_subtitle {
+  text-align: center; 
     font-size: 45pt;
     font-family: MontserratRegular;
    
     
 }
-#div-main {
+.text_left {
+    font-family: MontserratRegular;
+    font-size: 20pt;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    float: left;
+    width: 100%;
+}
+
+#about_title {
+    position:absolute;
+    margin: 0 auto;
+    top: 80%;
+    width: 100%; 
+    height: 10%; 
+    text-align: center;
+    font-size: 40pt;
+    font-family: MontserratMedium;
+   
+    
+}
+#aboutBody {
             
+            position: absolute;
+            top: 0;
+            left: 0; 
             width: 100%;
             height: 100%;
-            position: absolute;
-            background-image: url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg);
-    background-size: cover;
             animation: fade 1s;
     
         }
@@ -344,7 +381,7 @@ button:focus {
             position: absolute;
             right: 0px;
             left: 0px;
-            top: 55%;
+            top: 93.7%;
             margin:auto;
             width: 20%;
             height: 3%;
@@ -355,6 +392,80 @@ button:focus {
             cursor: pointer;
             text-align: center;
             z-index: 2;
+        }
+
+    
+    
+
+#footer3{
+position: absolute;
+            top: 97%;
+            background-color:#2c2c4b;
+            width: 100%;
+            height: 10%;
+}
+#footerDiv{
+    position: absolute; 
+    top: 83%;
+     background-image: url(http://maxpixel.freegreatpicture.com/static/photo/1x/Raining-Window-Glass-Saigon-Vietnam-Drops-Rain-1447723.jpg);
+    background-color: white; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    width: 100%;
+    height: 25%; 
+}
+#footerDivText{
+    position: absolute; 
+    height: 49%;
+    width: 100%;
+    background-color: rgba(230, 230, 230, 1);
+    border-width: 3px;
+    border-style: dotted;
+    border-color: rgba(100, 100, 100, 0.4); 
+    margin-top: 20px; 
+    
+}
+/* ---------------- aboutPage ------------------  */
+#body_scroll2{
+             position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(https://www.publicdomainpictures.net/pictures/20000/velka/sad-man-and-rain-1330349202VkV.jpg);
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            display: block;
+            animation: fade 1s;
+    
+        }
+.trans-div {
+    position: absolute; 
+          text-align: left;
+          font-size: 20pt; 
+          background-color: rgba(210, 210, 210, 0.5);
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 35px;
+          padding-bottom: 20px;
+          width: 97%;
+          height: 88%;
+          margin-top: 10px;
+    margin-bottom: 10px;
+          -moz-border-radius: 7px;
+          -webkit-border-radius: 7px;
+            font-family: MyriadPro;
+    
+        }
+#div-main2 {
+            
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url(https://static.pexels.com/photos/37728/pexels-photo-37728.jpeg);
+    background-size: cover;
+            animation: fade 1s;
+    
         }
 
 
@@ -845,19 +956,19 @@ button:focus {
              
         }
         
-        .suggestion_p{
+         .suggestion_p{
             color: #525252;
           font-family: MontserratRegular;
            position: absolute;
-            top:10%;
+            top:11%;
            left:0;
            right: 0;
            margin: auto;
            width: 100%;
-           height: 20%;
-           font-size: 20px;
+           height: 15%;
+           font-size: 15px;
            text-align: left;
-           overflow: hidden   
+           overflow: hidden;   
         }
         
          .suggestion_img{
