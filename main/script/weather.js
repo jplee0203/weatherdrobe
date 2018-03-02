@@ -4,13 +4,13 @@ var checkWeather_img = document.getElementById("checkWeather_img");
 var home_containerImg = document.getElementById("home_container");
 var header2_img = document.getElementById("header2");
 
-var hatIcon = document.getElementById("hatIcon");
+var outwearIcon = document.getElementById("outwearIcon");
 var shirtIcon = document.getElementById("shirtIcon");
 var pantsIcon = document.getElementById("pantsIcon");
 var shoesIcon = document.getElementById("shoesIcon");
 var accessoriesIcon = document.getElementById("accessoriesIcon");
 
-var hatP = document.getElementById("hatP");
+var outwearP = document.getElementById("outwearP");
 var shirtP = document.getElementById("shirtP");
 var pantsP = document.getElementById("pantsP");
 var shoesP = document.getElementById("shoesP");
@@ -19,8 +19,8 @@ var wearDiv1 = document.getElementById("wearDiv1");
 
 function umbrellaWeather(){
    wearDiv1.style.display = "block"; 
-   hatIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
-   hatP.innerHTML = "Outerwear";    
+   outwearIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
+   outwearP.innerHTML = "Outerwear";    
                  
    shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
    shirtP.innerHTML = "Shirt";
@@ -39,8 +39,8 @@ function umbrellaWeather(){
 function coldWeather(){
    wearDiv1.style.display = "block";
     
-   hatIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
-   hatP.innerHTML = "Outerwear";    
+   outwearIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
+   outwearP.innerHTML = "Outerwear";    
                  
    shirtIcon.style.backgroundImage = "URL('./img/wearIcon/sweater.png')";
    shirtP.innerHTML = "Sweater";

@@ -97,10 +97,15 @@
     
 <div id="checkWear"> 
 <div id="wearDiv">
+    <label class="switch">
+      <input onclick="toggleButton()" id="toggleMF" type="checkbox" checked>
+      <span class="slider round"></span>
+    </label>
+
        <div id="wearDiv1" class="wear">
-            <div class="wearImg" id="wearHat" onClick="putOnHat()"></div>
-            <p class="wearP" id="hatP">Hat</p>
-              <div class="wearicon" id="hatIcon"></div>
+            <div class="wearImg" id="wearOutwear" onClick="putOnOutwear()"></div>
+            <p class="wearP" id="outwearP">Outwear</p>
+              <div class="wearicon" id="outwearIcon"></div>
        </div>
 
        <div id="wearDiv2" class="wear">
