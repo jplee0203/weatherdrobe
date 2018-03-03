@@ -540,7 +540,7 @@ position: absolute;
   background-color: gainsboro;
   -webkit-transition: .4s;
   transition: .4s;
-   background-image: url(../img/wearIcon/FIcon.png);
+   background-image: url(../img/wearIcon/MIcon.png);  
     background-size: cover;
     background-repeat: no-repeat  
 }
@@ -560,7 +560,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-       background-image: url(../img/wearIcon/MIcon.png);
+       background-image: url(../img/wearIcon/FIcon.png); 
     background-size: cover;
     background-repeat: no-repeat 
 }

@@ -16,27 +16,70 @@ var pantsP = document.getElementById("pantsP");
 var shoesP = document.getElementById("shoesP");
 var accessoriesP = document.getElementById("accessoriesP");
 var wearDiv1 = document.getElementById("wearDiv1");
+var toggleBut = document.getElementById("toggleMF");
+var genderCase = 0
 
+toggleBut.addEventListener("click", function(){  
+
+ 
+ if(genderCase == 1){
+     if(toggleBut.checked) { shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-woman.png')"
+    } else { shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')"; }
+     
+ } else if (genderCase == 2) {
+      if(toggleBut.checked) { shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-woman.png')";
+             shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirts-woman.png')";
+    } else { shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+                              shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
+           }
+     
+ } 
+
+  
+//    if(toggleBut.checked) {  
+//       
+//  if(shoesIcon.style.backgroundImage === "URL('./img/wearIcon/shoes-shoes-man.png')"){}
+//   
+//  
+//   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirts-woman.png')";
+//  
+//    } 
+//    else {   
+//   
+//         
+//       shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+//     shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
+//    }
+    
+
+
+}); 
+
+// shirts && shoes 
 function umbrellaWeather(){
+   genderCase = 2;
    wearDiv1.style.display = "block"; 
    outwearIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
    outwearP.innerHTML = "Outerwear";    
                  
-   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
+   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirts-woman.png')";
    shirtP.innerHTML = "Shirt";
                   
    pantsIcon.style.backgroundImage = "URL('./img/wearIcon/pants.png')";
    pantsP.innerHTML = "Pants";
                
-   shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+   shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-woman.png')";
    shoesP.innerHTML = "Shoes";
             
    accessoriesIcon.style.backgroundImage = "URL('./img/wearIcon/umbrella.png')";
    accessoriesP.innerHTML = "Umbrella";
-             
+                
 }
 
+// shoes 
 function coldWeather(){
+    
+  genderCase = 1;    
    wearDiv1.style.display = "block";
     
    outwearIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
@@ -48,29 +91,31 @@ function coldWeather(){
    pantsIcon.style.backgroundImage = "URL('./img/wearIcon/pants.png')";
    pantsP.innerHTML = "Pants";
                
-   shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+   shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-woman.png')";
    shoesP.innerHTML = "Shoes";
             
    accessoriesIcon.style.backgroundImage = "URL('./img/wearIcon/accessories.png')";
    accessoriesP.innerHTML = "Accessories";
-             
+              
 }
 
+// shirts shoes
 function hotWeather(){
+     genderCase = 2;
    wearDiv1.style.display = "none";   
                  
-   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
+   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirts-woman.png')";
    shirtP.innerHTML = "Shirt";
                   
    pantsIcon.style.backgroundImage = "URL('./img/wearIcon/bottomwear-shorts-man.png')";
    pantsP.innerHTML = "Bottomwear";
                
-   shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+   shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-woman.png')";
    shoesP.innerHTML = "Shoes";
             
    accessoriesIcon.style.backgroundImage = "URL('./img/wearIcon/accessories.png')";
    accessoriesP.innerHTML = "Accessories";
-             
+                
 }
 
 
@@ -275,7 +320,7 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Snow1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Snow2.jpg')";
     con.innerHTML = "";
-    umbrellaWeather(); 
+    coldWeather();
     snowWeatherInfo();
     
 } else if(current_condition === "Thunderstorm"){
@@ -459,7 +504,7 @@ if(current_condition === "Snow"){
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Snow1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Snow2.jpg')";
     con.innerHTML = "";
-    umbrellaWeather();  
+    coldWeather(); 
     snowWeatherInfo();
     
 } else if(current_condition === "Thunderstorm"){
