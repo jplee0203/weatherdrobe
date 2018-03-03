@@ -39,7 +39,7 @@
         var geocoder = new google.maps.Geocoder;
         var marker = new google.maps.Marker({
           map: map,
-            icon: bluepin
+          icon: new google.maps.MarkerImage("./img/map/marker0.png")
         });
 //        marker.addListener('click', function() {
 //          infowindow.open(map, marker);
@@ -149,7 +149,9 @@
         var marker = new google.maps.Marker({
           map: map,
           position: place.geometry.location,
-          label: " " + counter + " "
+          icon: new google.maps.MarkerImage("./img/map/marker" + counter + ".png")
+            
+//          label: " " + counter + " "
         
         });
    
@@ -160,10 +162,20 @@
           
           console.log(nameStr);
             
-          var poiDiv = document.createElement("div");
-            poiDiv.setAttribute("id", "poiDiv");
-            poiDiv.innerHTML = counter + ". " + name + "<br/><br/>" + place.vicinity;     
+           var poiDiv = document.createElement("div");
+            poiDiv.className = "travelDiv" + counter;
+            poiDiv.setAttribute("id", "poiDiv");    
             resultDiv.appendChild(poiDiv);    
+     
+          var travelIdP = document.createElement("p"); 
+              travelIdP.className = "travelP"
+              travelIdP.innerHTML = counter + ". " + name
+              poiDiv.appendChild(travelIdP);  
+          
+          
+          var travelIdImg = document.createElement("div"); 
+              travelIdImg.className = "travelImg"
+              poiDiv.appendChild(travelIdImg);    
     
           poiDiv.addEventListener("mouseover", function(){
               
@@ -173,7 +185,7 @@
               
           });
           
-          poiDiv.addEventListener("click", function(){
+            travelIdImg.addEventListener("click", function(){
               window.open("https://www.google.ca/maps/place/" + nameStr + "+" + cityName);
           });
           
