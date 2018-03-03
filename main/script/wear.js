@@ -45,7 +45,7 @@
     
     function putOnOutwear() {
     	// womensParam is a default parameter & mensParam is a condition  Parameter.
-    	// openSiteWithParams(womensParam, mensParam) 
+    	// openSiteWithParams(womensParam, mensParam, weatherCondition) 
         openSiteWithParams("outerwear", "outerwear", null);
     }
     
@@ -65,7 +65,7 @@
     	openSiteWithParams("", "", current_condition);
     }
 
-    function openSiteWithParams(womensParam, mensParam, waetherCondition) {
+    function openSiteWithParams(womensParam, mensParam, weatherCondition) {
     	var param = "&fts=womens-";
     	param = param + womensParam;
     	
@@ -73,7 +73,7 @@
     		param = "&fts=mens-" + mensParam;
     	}
     	
-        if (waetherCondition == "Rain" || waetherCondition == "Drizzle") {
+        if (weatherCondition == "Rain" || weatherCondition == "Drizzle") {
         	param = param + "umbrellas";
         } else {
             param = param + "accessories";
