@@ -44,85 +44,48 @@
 //     var+ "&fts=red+dress&offset=0&limit=10"
     
     function putOnOutwear() {
-        var param = "&fts=womens-outerwear";
-        
-        if(genderCheck == "mens"){
-            
-            param = "&fts=mens-outerwear";
-        }
-            
-            var addParams = param + weatherParametersClassifier();
-                var returnData = requestToShopstyle(addParams);
-                window.open(returnData.responseJSON.products[0].clickUrl);
-                     
+    	// womensParam is a default parameter & mensParam is a condition  Parameter.
+    	// openSiteWithParams(womensParam, mensParam) 
+        openSiteWithParams("outerwear", "outerwear", null);
     }
     
     function putOnShirt() {
-        var param = "&fts=womens-tops";
-        
-        if(genderCheck == "mens"){
-            param = "&fts=mens-shirts"
-        }
-        var addParams = param + weatherParametersClassifier();
-    	    var returnData = requestToShopstyle(addParams);
-    	    window.open(returnData.responseJSON.products[0].clickUrl);
+	    openSiteWithParams ("tops", "shirts", null);
     }
 
     function putOnPants() {
-        var param = "&fts=womens-pants";
-        
-        if(genderCheck =="mens"){
-            param = "&fts=mens-pants"
-        }
-        
-    	    var addParams = param + weatherParametersClassifier();
-    	    var returnData = requestToShopstyle(addParams);
-    	    window.open(returnData.responseJSON.products[0].clickUrl);
-//         return window.open(returnData.responseJSON.products[0].clickUrl);
+	    openSiteWithParams ("pants", "pants", null);
     }
 
     function putOnShoes() {
-         var param = "&fts=womens-shoes";
-        
-        if(genderCheck =="mens"){
-            param = "&fts=mens-shoes"
-        }
-        
-        var addParams = param + weatherParametersClassifier();
-    	    var returnData = requestToShopstyle(addParams);
-    	    window.open(returnData.responseJSON.products[0].clickUrl);
+	    openSiteWithParams ("shoes", "shoes", null);
     }
 
     function putOnAccessories() {
-        var param = "&fts=";
-        
-        if(genderCheck =="mens"){
-            param = param + "mens-"
-        }
-        
-        else{
-            param = param + "womens-"
-        }
-        
-        if(current_condition == "Rain"){
-            
-         param = param + "umbrellas";
-            
-        }
-        else {
-            param = param + "accessories";
-        }
-        
-        console.log(param);
-        
-        
-        var addParams = param + weatherParametersClassifier();
-    	    var returnData = requestToShopstyle(addParams);
-    	    window.open(returnData.responseJSON.products[0].clickUrl);
+    	openSiteWithParams("", "", current_condition);
     }
 
+    function openSiteWithParams(womensParam, mensParam, waetherCondition) {
+    	var param = "&fts=womens-";
+    	param = param + womensParam;
+    	
+    	if (genderCheck == "mens") {
+    		param = "&fts=mens-" + mensParam;
+    	}
+    	
+        if (waetherCondition == "Rain" || waetherCondition == "Drizzle") {
+        	param = param + "umbrellas";
+        } else {
+            param = param + "accessories";
+        }
+    	
+        var addParams = param + weatherParametersClassifier();
+        var returnData = requestToShopstyle(addParams);
+        window.open(returnData.responseJSON.products[0].clickUrl);
+    }    
+    
     function requestToShopstyle(params) {
-    	    var result = "";
+    	var result = "";
         return $.ajax({
             url: defaultRequestUri + params,
             async: false,
@@ -132,7 +95,6 @@
         });
         return result;
     }
-    
     
 //     var addParams = "";
     function weatherParametersClassifier() {
