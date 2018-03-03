@@ -106,6 +106,10 @@ document.getElementById("goWear_travel").addEventListener("click", function(){
     goNext() 
 }); 
 
+document.getElementById("goWear_Future").addEventListener("click", function(){
+    goNext() 
+}); 
+
  document.getElementById("goTravel").addEventListener("click", function(){
     showMenu();  
     var scTop = document.getElementById("body_scroll").scrollTop;
@@ -132,6 +136,7 @@ document.getElementById("goWear_travel").addEventListener("click", function(){
 
 
 
+
 document.getElementById("wearBut").addEventListener("click", function(){
     document.getElementById("checkWear").style.display = "block" 
     document.getElementById("wearBut").className = "wearBut_clicked"   
@@ -139,6 +144,9 @@ document.getElementById("wearBut").addEventListener("click", function(){
     document.getElementById("travelBut").className = "travelBut"    
     document.getElementById("checkWeather").style.display = "none"
     document.getElementById("checkTravel").style.display = "none"
+    
+    document.getElementById("futureBut").className = "futureBut"
+    document.getElementById("checkFuture").style.display = "none" 
 }); 
 
 document.getElementById("weatherBut").addEventListener("click", function(){
@@ -148,6 +156,9 @@ document.getElementById("weatherBut").addEventListener("click", function(){
     document.getElementById("travelBut").className = "travelBut"   
     document.getElementById("checkWear").style.display = "none" 
     document.getElementById("checkTravel").style.display = "none"
+    
+    document.getElementById("futureBut").className = "futureBut"
+    document.getElementById("checkFuture").style.display = "none" 
      
 }); 
 
@@ -157,6 +168,21 @@ document.getElementById("travelBut").addEventListener("click", function(){
     document.getElementById("wearBut").className = "wearBut"
     document.getElementById("weatherBut").className = "weatherBut" 
     document.getElementById("checkWear").style.display = "none"   
-    document.getElementById("checkWeather").style.display = "none"  
+    document.getElementById("checkWeather").style.display = "none" 
+    
+    document.getElementById("futureBut").className = "futureBut"
+    document.getElementById("checkFuture").style.display = "none" 
+    
 }); 
 
+document.getElementById("futureBut").addEventListener("click", function(){
+    document.getElementById("futureBut").className = "futureBut_clicked"
+    document.getElementById("wearBut").className = "wearBut"
+    document.getElementById("weatherBut").className = "weatherBut"
+    document.getElementById("travelBut").className = "travelBut" 
+    
+    document.getElementById("checkFuture").style.display = "block"
+    document.getElementById("checkWear").style.display = "none"   
+    document.getElementById("checkWeather").style.display = "none" 
+    document.getElementById("checkTravel").style.display = "none" 
+}); 
