@@ -35,10 +35,6 @@
 
     //weather end
 
-
-
-    
-
     var defaultRequestUri = "http://api.shopstyle.com/api/v2/products?pid=uid4400-40597880-66"; 
     var genderCheck = "female";
 //     var+ "&fts=red+dress&offset=0&limit=10"
