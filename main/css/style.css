@@ -740,8 +740,7 @@ input:checked + .slider:before {
            .checkWeather_img{
             position: absolute;
             left: 10%;
-            top: 0;
-               bottom: 0;
+             top: 30%;
                margin: auto;
             width: 25%;
             height: 40%;
@@ -1136,7 +1135,7 @@ input:checked + .slider:before {
            margin: auto;
            width: 100%;
            height: 15%;
-           font-size: 15px;
+           font-size: 20px;
            text-align: left;
            overflow: hidden;   
         }
@@ -1323,18 +1322,18 @@ input:checked + .slider:before {
         }
         
         .travel_p{
-           color: #525252;
-           font-family: MontserratRegular;
+             color: #525252;
+          font-family: MontserratRegular;
            position: absolute;
-            top:10%;
+            top:11%;
            left:0;
            right: 0;
            margin: auto;
            width: 100%;
-           height: 20%;
+           height: 15%;
            font-size: 20px;
            text-align: left;
-           overflow: hidden   
+           overflow: hidden;    
         }
         
          .travel_img{
@@ -1490,37 +1489,53 @@ input:checked + .slider:before {
         
           .footer1_explore{ position: absolute;
               position: absolute;
-            left: 0;
-            right: 0;
+            left: 27%;
+           
             bottom: 15%;
-            margin: auto;  
-            width: 15%;
+          
+            width: 20%;
             height: 40%;}  
         
-        
-          .footer1_shop{ position: absolute;
-            position: absolute;
-            left: 20%;
-            bottom: 15%;
-            width: 15%;
-            height: 40%;}  
-        
+  
           .footer1_more{ position: absolute;
               
-            right: 20%;
+            right: 29%;
             bottom: 15%;
-            width: 15%;
+            width: 20%;
             height: 40%;}
+
+   .footer1_shop{ position: absolute;
+            position: absolute;
+            left: 5%;
+            bottom: 15%;
+            width: 20%;
+            height: 40%;} 
+
+
+     .footer1_moreOver{ position: absolute;
+              
+            right: 5%;
+            bottom: 15%;
+            width: 20%;
+            height: 40%;}
+    
         
         .footer1_h2{
             font-family: MontserratRegular;
             color: #00ff9c;
             position: absolute;
             top: 0;
+           -webkit-transition-duration:0.1s;
             margin: auto;  
             width: 100%;
             height: 20%;
             text-align: center;} 
+
+ 
+         .footer1_h2:hover {
+           transform:scale(1.2);
+           }
+
         
          .footer1_p1{
             font-family: MontserratRegular; 
@@ -1625,8 +1640,8 @@ input:checked + .slider:before {
              .mapDiv{
             position: absolute;
             left: 5%;
-            top: 0;
-            bottom: 0;
+            top: 25%;
+           
             margin: auto;
             width: 35%;
             height: 60%;
@@ -1690,7 +1705,9 @@ input:checked + .slider:before {
         .travelDiv{
             position: absolute;
             right: 10%;
-            top: 5%;
+            top: 0;
+            bottom: 0;
+            
          
             margin: auto;
             width: 45%;
@@ -1852,12 +1869,14 @@ input:checked + .slider:before {
 }
 }
 
-/*        temperDiv_Future     */
+/*////////////////////////        temperDiv_Future     */
+
+
 
 #temperDiv_Future{
             position: absolute;
             right: 20%;
-            top: 10%;
+            top: 14%;
            
             margin: auto;
             width: 60%;
@@ -2293,10 +2312,10 @@ input:checked + .slider2:before {
   max-width: 400px;
   min-width: 180px;
   margin: 0 auto;
-  border: 2px solid #3b455f;
+  border: 5px solid #3b455f;
   background-color:#ebebeb;
   z-index: 10;
-  margin-top:2%;
+  margin-top:5%;
 }
 .custom-select select {
   border: none;
@@ -2320,12 +2339,18 @@ input:checked + .slider2:before {
   width: 50px;
   height: 100%;
   line-height: 38px;
-  content: "∨";
+/*  content: "∨";*/
+ content: "";
+  background-image: url("../img/darrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
   text-align: center;
   color: black;
   font-size: 24px;
-  border-left: 2px solid #3b455f;
+ 
   z-index: -1;
+    border-left: 5px solid #3b455f;
 }
 
-
+ 
