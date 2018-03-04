@@ -186,3 +186,49 @@ document.getElementById("futureBut").addEventListener("click", function(){
     document.getElementById("checkWeather").style.display = "none" 
     document.getElementById("checkTravel").style.display = "none" 
 }); 
+
+
+document.getElementById("day1").addEventListener("click", function(){
+    document.getElementById("day2").className = "forecast2"
+    document.getElementById("day3").className = "forecast3"
+    document.getElementById("day4").className = "forecast4"
+    document.getElementById("day5").className = "forecast5" 
+    
+    document.getElementById("day1").className = "forecast1_clicked"
+}); 
+
+document.getElementById("day2").addEventListener("click", function(){
+    document.getElementById("day3").className = "forecast3"
+    document.getElementById("day4").className = "forecast4"
+    document.getElementById("day5").className = "forecast5"
+    document.getElementById("day1").className = "forecast1" 
+    
+    document.getElementById("day2").className = "forecast2_clicked"
+}); 
+
+document.getElementById("day3").addEventListener("click", function(){
+    document.getElementById("day4").className = "forecast4"
+    document.getElementById("day5").className = "forecast5"
+    document.getElementById("day1").className = "forecast1"
+    document.getElementById("day2").className = "forecast2" 
+    
+    document.getElementById("day3").className = "forecast3_clicked"
+}); 
+
+document.getElementById("day4").addEventListener("click", function(){
+    document.getElementById("day5").className = "forecast5"
+    document.getElementById("day1").className = "forecast1"
+    document.getElementById("day2").className = "forecast2"
+    document.getElementById("day3").className = "forecast3" 
+    
+    document.getElementById("day4").className = "forecast4_clicked"
+}); 
+
+document.getElementById("day5").addEventListener("click", function(){
+    document.getElementById("day1").className = "forecast1"
+    document.getElementById("day2").className = "forecast2"
+    document.getElementById("day3").className = "forecast3"
+    document.getElementById("day4").className = "forecast4" 
+    
+    document.getElementById("day5").className = "forecast5_clicked"
+});
