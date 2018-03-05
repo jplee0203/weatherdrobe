@@ -242,8 +242,21 @@ document.getElementById("ben").addEventListener("click", function(){
     window.open("https://liuben.ca/home/");
 });
 document.getElementById("jacky").addEventListener("click", function(){
-
+ window.open("https://9gag.com/");
 });
 document.getElementById("keiju").addEventListener("click", function(){
    window.open("https://keijusekiguchi.com/wp/");
+});
+document.getElementById("shopStyle").addEventListener("click", function(){
+   window.open("https://www.shopstyle.ca/");
+});
+document.getElementById("searchBut").addEventListener("click", function(){
+if(document.getElementById("searchInp").value != ""){
+document.getElementById("searchInp").style.display = "none";
+document.getElementById("searchBut").style.display = "none";
+document.getElementById("redo").style.display = "block";    
+  }
+});
+document.getElementById("redo").addEventListener("click", function(){
+location.reload();
 });

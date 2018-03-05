@@ -1360,6 +1360,7 @@ suggestion_p.innerHTML = weatherInfo[num]
 
 function travelSnowInfo(){ 
 var num2=0;    
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=q8ecWvLuBIu2jwOy3qrgBg&q=Museum&oq=Museum&gs_l=psy-ab.3..35i39k1j0i67k1l9.256744.256744.0.257280.1.1.0.0.0.0.93.93.1.1.0....0...1.1.64.psy-ab..0.1.93....0.B3ME09pdcfo", "https://www.google.ca/search?q=Library&rlz=1C1CHBF_enCA750CA750&oq=Library&aqs=chrome..69i57j69i61j0l4.804j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=ucicWuEI1tCPA4qagpgF&q=Convenience+Store&oq=Convenience+Store&gs_l=psy-ab.3..35i39k1j0i20i263k1j0l8.6411.6411.0.6968.1.1.0.0.0.0.59.59.1.1.0....0...1.1.64.psy-ab..0.1.59....0.GpH2_c44dDU"]    
 var travelH = ["Museum", "Library", "Convenience Store" ];   
 var travelInfo = ["Even though it’s snowing out, staying indoors is a best method to keep yourself warm. Museums are a best place to stay and keeping yourself warm.", "Even though it’s snowing out, staying indoors is a best method to keep yourself warm. Library are a best place to stay and keeping yourself warm.", "Even though it’s snowing out, staying indoors is a best method to keep yourself warm. It is important to stay indoors, but convenience stores are a perfect place to keep yourself warm, and buy the things you need." ];
     
@@ -1367,7 +1368,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow0.png ')";
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]     
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1381,7 +1382,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + 
 } 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1397,13 +1398,14 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + 
 } 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
 }    
      
 function travelThunderstormInfo(){ 
 ////////////////////  travel 
 var num2=0;    
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=BMacWpGqDIi4jwO26KS4Ag&q=indoors+activities&oq=Indoors+activi&gs_l=psy-ab.1.0.0l10.6901.12471.0.14571.7.7.0.0.0.0.54.321.7.7.0....0...1.1.64.psy-ab..0.7.320...0i67k1j0i10k1j0i20i263k1.0.g7zdR7ICIag", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=qcWcWqbTE8GUjQOR-aaIAw&q=game+to+play+at+home&oq=game+to+play+at+home&gs_l=psy-ab.3..0j0i203k1j0l2j0i22i30k1l6.11755.25115.0.25444.22.22.0.0.0.0.99.1333.22.22.0....0...1.1j4.64.psy-ab..0.22.1331...0i7i30k1j0i7i10i30k1j0i13k1j35i39k1j0i131i67k1j0i67k1j0i131i20i263k1j0i20i263k1j0i22i10i30k1.0.dfzoaNfa8YY"]     
 var travelH = ["Indoors", "House"];    
 var travelInfo = ["In weather conditions like these, it is important to stay indoors rather than outside, to places such as convenience stores, museums, art galleries, etc. In weather conditions like these, it is dangerous to stay outside for long periods of times", "In weather conditions like these, it is important to stay indoors rather than outside, and stay at your house. In weather conditions like these, it is dangerous to stay outside for long periods of times"];
     
@@ -1411,7 +1413,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm0.p
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]      
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1425,7 +1427,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" +
 } 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1441,7 +1443,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" +
 } 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });    
     
 } 
@@ -1450,7 +1452,7 @@ function travelDrizzleInfo(){
 ////////////////////  travel 
    
 var num2=0;    
-    
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=osScWuajCI6AjwOJuYaYAw&q=Art+Gallery&oq=Art+Gallery&gs_l=psy-ab.3..0i67k1j0i131i46k1j46i131k1l2j0j0i131k1j0l6.13672.13672.0.14266.1.1.0.0.0.0.52.52.1.1.0....0...1.1.64.psy-ab..0.1.52....0.y4u89rcqoIE", "https://www.google.ca/search?q=Museum&rlz=1C1CHBF_enCA750CA750&oq=Museum&aqs=chrome..69i57j0l5.3078j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Library&rlz=1C1CHBF_enCA750CA750&oq=Library&aqs=chrome..69i57j69i61j0l4.728j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Night+Club&rlz=1C1CHBF_enCA750CA750&oq=Night+Club&aqs=chrome..69i57j0l5.2279j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Convenience+Store&rlz=1C1CHBF_enCA750CA750&oq=Convenience+Store&aqs=chrome..69i57j0l5.776j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Movie+Theater&rlz=1C1CHBF_enCA750CA750&oq=Movie+Theater&aqs=chrome..69i57j0l5.787j0j9&sourceid=chrome&ie=UTF-8"]     
 var travelH = ["Art Gallery", "Museum", "Library", "Night Club", "Convenience Store", "Movie Theater"]; 
 var travelInfo = ["It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Art gallery are a great place to visit for you artistic people out there. It’s warm and contains the most recent artwork done by people around your area.", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Museums are a great place to visit to learn about history. It’s warm and contains pieces of artwork and artifacts that is great to look at and learn from.", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Libraries are a great place to stay since you can read books and watch movies while you stay there. It is also warm and contain materials which would keep you entertained or educated.", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Night clubs are a great place to hang out before the weekend, and grab a couple of drinks, and meet with other people. It is also warm, and keeps you out of the rain.", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Convenience stores are a great place that will keep you warm, and to grab things you need for the day.", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Movies to kill some time are a great idea for a wet weather like these. It will keep you warm, and out of the rain."];    
     
@@ -1458,7 +1460,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle0.png ')
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]     
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1473,7 +1475,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1490,7 +1492,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });  
     
 } 
@@ -1499,7 +1501,7 @@ function travelRainInfo(){
 // travel 
    
 var num2=0;    
- 
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=osScWuajCI6AjwOJuYaYAw&q=Art+Gallery&oq=Art+Gallery&gs_l=psy-ab.3..0i67k1j0i131i46k1j46i131k1l2j0j0i131k1j0l6.13672.13672.0.14266.1.1.0.0.0.0.52.52.1.1.0....0...1.1.64.psy-ab..0.1.52....0.y4u89rcqoIE", "https://www.google.ca/search?q=Museum&rlz=1C1CHBF_enCA750CA750&oq=Museum&aqs=chrome..69i57j0l5.3078j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Library&rlz=1C1CHBF_enCA750CA750&oq=Library&aqs=chrome..69i57j69i61j0l4.728j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Night+Club&rlz=1C1CHBF_enCA750CA750&oq=Night+Club&aqs=chrome..69i57j0l5.2279j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Convenience+Store&rlz=1C1CHBF_enCA750CA750&oq=Convenience+Store&aqs=chrome..69i57j0l5.776j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Movie+Theater&rlz=1C1CHBF_enCA750CA750&oq=Movie+Theater&aqs=chrome..69i57j0l5.787j0j9&sourceid=chrome&ie=UTF-8"]  
 var travelH = ["Art Gallery", "Museum", "Library", "Night Club", "Convenience Store", "Movie Theater"];    
 var travelInfo = ["It’s wet, and it is likely anyone would be out for long periods of time. Art gallery are a great place to visit for you artistic people out there. It’s warm and contains the most recent artwork done by people around your area.", "It’s wet, and it is likely anyone would be out for long periods of time. . Museums are a great place to visit to learn about history. It’s warm and contains pieces of artwork and artifacts that is great to look at and learn from.", "It’s wet, and it is likely anyone would be out for long periods of time. Libraries are a great place to stay since you can read books and watch movies while you stay there. It is also warm and contain materials which would keep you entertained or educated.", "It’s wet, and it is likely anyone would be out for long periods of time. Night clubs are a great place to hang out before the weekend, and grab a couple of drinks, and meet with other people. It is also warm, and keeps you out of the rain.", "It’s wet, and it is likely anyone would be out for long periods of time. Convenience stores are a great place that will keep you warm, and to grab things you need for the day.", "It’s wet, and it is likely anyone would be out for long periods of time. Movies to kill some time are a great idea for a wet weather like these. It will keep you warm, and out of the rain." ];
     
@@ -1507,7 +1509,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain0.png ')";
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]   
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1522,7 +1524,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1539,7 +1541,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });        
   
 } 
@@ -1547,7 +1549,8 @@ travel_p.innerHTML = travelInfo[num2]
 function travelMistInfo(){ 
 // travel 
    
-var num2=0;    
+var num2=0;  
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=osScWuajCI6AjwOJuYaYAw&q=Art+Gallery&oq=Art+Gallery&gs_l=psy-ab.3..0i67k1j0i131i46k1j46i131k1l2j0j0i131k1j0l6.13672.13672.0.14266.1.1.0.0.0.0.52.52.1.1.0....0...1.1.64.psy-ab..0.1.52....0.y4u89rcqoIE", "https://www.google.ca/search?q=Museum&rlz=1C1CHBF_enCA750CA750&oq=Museum&aqs=chrome..69i57j0l5.3078j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Library&rlz=1C1CHBF_enCA750CA750&oq=Library&aqs=chrome..69i57j69i61j0l4.728j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Night+Club&rlz=1C1CHBF_enCA750CA750&oq=Night+Club&aqs=chrome..69i57j0l5.2279j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Convenience+Store&rlz=1C1CHBF_enCA750CA750&oq=Convenience+Store&aqs=chrome..69i57j0l5.776j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Movie+Theater&rlz=1C1CHBF_enCA750CA750&oq=Movie+Theater&aqs=chrome..69i57j0l5.787j0j9&sourceid=chrome&ie=UTF-8"]    
 var travelH = ["Art Gallery", "Museum", "Library", "Night Club", "Convenience Store", "Movie Theater"];     
 var travelInfo = ["It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Art gallery are a great place to visit for you artistic people out there. It’s warm and contains the most recent artwork done by people around your area.", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Museums are a great place to visit to learn about history. It’s warm and contains pieces of artwork and artifacts that is great to look at and learn from.", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Libraries are a great place to stay since you can read books and watch movies while you stay there. It is also warm and contain materials which would keep you entertained or educated. ", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Night clubs are a great place to hang out before the weekend, and grab a couple of drinks, and meet with other people. It is also warm, and keeps you out of the mist.", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Convenience stores are a great place that will keep you warm, and to grab things you need for the day. ", "It’s a little wet outside, but staying outdoors for a long time would make you wet, so it is important to stay indoors rather than outside. Movies to kill some time are a great idea for a wet weather like these. It will keep you warm, and out of the mist." ];
     
@@ -1555,7 +1558,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist0.png ')";
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]     
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1570,7 +1573,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1587,7 +1590,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });      
     
 } 
@@ -1596,15 +1599,15 @@ function travelFogInfo(){
 // travel 
    
 var num2=0;    
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=osScWuajCI6AjwOJuYaYAw&q=Art+Gallery&oq=Art+Gallery&gs_l=psy-ab.3..0i67k1j0i131i46k1j46i131k1l2j0j0i131k1j0l6.13672.13672.0.14266.1.1.0.0.0.0.52.52.1.1.0....0...1.1.64.psy-ab..0.1.52....0.y4u89rcqoIE", "https://www.google.ca/search?q=Museum&rlz=1C1CHBF_enCA750CA750&oq=Museum&aqs=chrome..69i57j0l5.3078j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Library&rlz=1C1CHBF_enCA750CA750&oq=Library&aqs=chrome..69i57j69i61j0l4.728j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Night+Club&rlz=1C1CHBF_enCA750CA750&oq=Night+Club&aqs=chrome..69i57j0l5.2279j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Convenience+Store&rlz=1C1CHBF_enCA750CA750&oq=Convenience+Store&aqs=chrome..69i57j0l5.776j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Movie+Theater&rlz=1C1CHBF_enCA750CA750&oq=Movie+Theater&aqs=chrome..69i57j0l5.787j0j9&sourceid=chrome&ie=UTF-8"]      
 var travelH = ["Art Gallery", "Museum", "Library", "Night Club", "Convenience Store", "Movie Theater"];   
-    
 var travelInfo = ["It’s foggy out, and it is not recommended to stay outdoors for long periods of time. Art gallery are a great place to visit for you artistic people out there. It’s warm and contains the most recent artwork done by people around your area.", "It’s foggy out, and it is not recommended to stay outdoors for long periods of time. Museums are a great place to visit to learn about history. It’s warm and contains pieces of artwork and artifacts that is great to look at and learn from.", "It’s foggy out, and it is not recommended to stay outdoors for long periods of time. Libraries are a great place to stay since you can read books and watch movies while you stay there. It is also warm and contain materials which would keep you entertained or educated.", "It’s foggy out, and it is not recommended to stay outdoors for long periods of time. Night clubs are a great place to hang out before the weekend, and grab a couple of drinks, and meet with other people. It is also warm, and keeps you out of the fog.", "It’s foggy out, and it is not recommended to stay outdoors for long periods of time. Convenience stores are a great place that will keep you warm, and to grab things you need for the day.", "It’s foggy out, and it is not recommended to stay outdoors for long periods of time. Movies to kill some time are a great idea for a wet weather like these. It will keep you warm, and out of the mist." ];
     
 travel_show.style.backgroundImage = "url('./img/travelSuggestion/fog0.png ')"; 
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]     
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1619,7 +1622,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/fog" + num2 + "
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1636,7 +1639,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/fog" + num2 + "
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });   
 } 
 
@@ -1644,7 +1647,7 @@ function travelSmokeInfo(){
   ////////////////////  travel 
    
 var num2=0;   
-    
+var leanMore = ["https://www.google.ca/search?q=Museum&rlz=1C1CHBF_enCA750CA750&oq=Museum&aqs=chrome..69i57j0l5.4268j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Library&rlz=1C1CHBF_enCA750CA750&oq=Library&aqs=chrome..69i57j69i61j0l4.1819j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Convenience+Store&rlz=1C1CHBF_enCA750CA750&oq=Convenience+Store&aqs=chrome..69i57j0l5.389j0j9&sourceid=chrome&ie=UTF-8"]     
 var travelH = ["Museum", "Library", "Convenience Store"];     
 var travelInfo = ["The smoke that surrounds your area may cause coughing, pain in the eyes, and breathing in CO2. But staying indoors are a great choice in these weather conditions. Museums are a great place to visit to learn about history. It’s contains pieces of artwork and artifacts that is great to look at and learn from.", "The smoke that surrounds your area may cause coughing, pain in the eyes, and breathing in CO2. But staying indoors are a great choice in these weather conditions. Libraries are a great place to stay since you can read books and watch movies while you stay there. It contains materials which would keep you entertained or educated.", "The smoke that surrounds your area may cause coughing, pain in the eyes, and breathing in CO2. But staying indoors are a great choice in these weather conditions.  Convenience stores are a great place to grab things you need for the day."];
     
@@ -1652,7 +1655,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/smoke0.png ')";
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]     
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1667,7 +1670,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/smoke" + num2 +
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1684,7 +1687,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/smoke" + num2 +
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });    
     
 } 
@@ -1693,7 +1696,7 @@ function travelHazeInfo(){
  ////////////////////  travel 
    
 var num2=0;   
-    
+var leanMore = ["https://www.google.ca/search?q=Museum&rlz=1C1CHBF_enCA750CA750&oq=Museum&aqs=chrome..69i57j0l5.4268j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Library&rlz=1C1CHBF_enCA750CA750&oq=Library&aqs=chrome..69i57j69i61j0l4.1819j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Convenience+Store&rlz=1C1CHBF_enCA750CA750&oq=Convenience+Store&aqs=chrome..69i57j0l5.389j0j9&sourceid=chrome&ie=UTF-8"]    
 var travelH = ["Museum", "Library", "Convenience Store"];     
 var travelInfo = ["The smoke is caused by a forest fire is currently stuck in our atmosphere, and I would recommend that you stay indoors to prevent yourself breathing in the smoke, and having teary eyes from the smoke. So, stay indoors if you want to go out for the day. Museums are a great place to visit to learn about history. It contains pieces of artwork and artifacts that is great to look at and learn from.", "The smoke is caused by a forest fire is currently stuck in our atmosphere, and I would recommend that you stay indoors to prevent yourself breathing in the smoke, and having teary eyes from the smoke. So, stay indoors if you want to go out for the day. Libraries are a great place to stay since you can read books and watch movies while you stay there. It contains materials which would keep you entertained or educated.", "The smoke is caused by a forest fire is currently stuck in our atmosphere, and I would recommend that you stay indoors to prevent yourself breathing in the smoke, and having teary eyes from the smoke. So, stay indoors if you want to go out for the day. Convenience stores are a great place to grab things you need for the day."];
     
@@ -1701,7 +1704,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze0.png ')";
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]     
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1716,7 +1719,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1733,7 +1736,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });   
 }
 
@@ -1741,6 +1744,7 @@ function travelSanddustInfo(){
 // travel 
    
 var num2=0;    
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=qcWcWqbTE8GUjQOR-aaIAw&q=game+to+play+at+home&oq=game+to+play+at+home&gs_l=psy-ab.3..0j0i203k1j0l2j0i22i30k1l6.11755.25115.0.25444.22.22.0.0.0.0.99.1333.22.22.0....0...1.1j4.64.psy-ab..0.22.1331...0i7i30k1j0i7i10i30k1j0i13k1j35i39k1j0i131i67k1j0i67k1j0i131i20i263k1j0i20i263k1j0i22i10i30k1.0.dfzoaNfa8YY", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=BMacWpGqDIi4jwO26KS4Ag&q=indoors+activities&oq=Indoors+activi&gs_l=psy-ab.1.0.0l10.6901.12471.0.14571.7.7.0.0.0.0.54.321.7.7.0....0...1.1.64.psy-ab..0.7.320...0i67k1j0i10k1j0i20i263k1.0.g7zdR7ICIag"]     
 var travelH = ["House", "Indoors"];       
 var travelInfo = ["Sand and dusts are flying everywhere in your area. In weather conditions like these, it is important to stay indoors until the sand storm blows over. You house is a great place to stay, since all of the things are there until the sand storm blows over.", "Sand and dusts are flying everywhere in your area. In weather conditions like these, it is important to stay indoors until the sand storm blows over. Indoors such as art gallery, museums, and other places that are in a large building are a great place to stay until the sand storm blows over."];
     
@@ -1748,7 +1752,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/sanddust0.png '
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]    
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1763,7 +1767,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/sanddust" + num
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1780,7 +1784,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/sanddust" + num
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });         
     
 }
@@ -1788,7 +1792,8 @@ travel_p.innerHTML = travelInfo[num2]
 function travelSandInfo(){ 
 // travel 
    
-var num2=0;    
+var num2=0;  
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=qcWcWqbTE8GUjQOR-aaIAw&q=game+to+play+at+home&oq=game+to+play+at+home&gs_l=psy-ab.3..0j0i203k1j0l2j0i22i30k1l6.11755.25115.0.25444.22.22.0.0.0.0.99.1333.22.22.0....0...1.1j4.64.psy-ab..0.22.1331...0i7i30k1j0i7i10i30k1j0i13k1j35i39k1j0i131i67k1j0i67k1j0i131i20i263k1j0i20i263k1j0i22i10i30k1.0.dfzoaNfa8YY", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=BMacWpGqDIi4jwO26KS4Ag&q=indoors+activities&oq=Indoors+activi&gs_l=psy-ab.1.0.0l10.6901.12471.0.14571.7.7.0.0.0.0.54.321.7.7.0....0...1.1.64.psy-ab..0.7.320...0i67k1j0i10k1j0i20i263k1.0.g7zdR7ICIag"]    
 var travelH = ["House", "Indoors"];       
 var travelInfo = ["Sand are flying everywhere in your area. In weather conditions like these, it is important to stay indoors until the sand storm blows over. You house is a great place to stay, since all of the things are there until the sand storm blows over.", "Sand are flying everywhere in your area. In weather conditions like these, it is important to stay indoors until the sand storm blows over. Indoors such as art gallery, museums, and other places that are in a large building are a great place to stay until the sand storm blows over."];
     
@@ -1796,7 +1801,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/sand0.png ')";
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]    
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1811,7 +1816,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/sand" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1828,14 +1833,15 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/sand" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });   
 }
 
 function travelDustInfo(){ 
 // travel 
    
-var num2=0;    
+var num2=0; 
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=qcWcWqbTE8GUjQOR-aaIAw&q=game+to+play+at+home&oq=game+to+play+at+home&gs_l=psy-ab.3..0j0i203k1j0l2j0i22i30k1l6.11755.25115.0.25444.22.22.0.0.0.0.99.1333.22.22.0....0...1.1j4.64.psy-ab..0.22.1331...0i7i30k1j0i7i10i30k1j0i13k1j35i39k1j0i131i67k1j0i67k1j0i131i20i263k1j0i20i263k1j0i22i10i30k1.0.dfzoaNfa8YY", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=BMacWpGqDIi4jwO26KS4Ag&q=indoors+activities&oq=Indoors+activi&gs_l=psy-ab.1.0.0l10.6901.12471.0.14571.7.7.0.0.0.0.54.321.7.7.0....0...1.1.64.psy-ab..0.7.320...0i67k1j0i10k1j0i20i263k1.0.g7zdR7ICIag"]    
 var travelH = ["House", "Indoors"];       
 var travelInfo = ["Dusts are flying everywhere in your area. In weather conditions like these, it is important to stay indoors until the sand storm blows over. You house is a great place to stay, since all of the things are there until the sand storm blows over.", "Dusts are flying everywhere in your area. In weather conditions like these, it is important to stay indoors until the sand storm blows over. Indoors such as art gallery, museums, and other places that are in a large building are a great place to stay until the sand storm blows over."];
     
@@ -1843,7 +1849,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/dust0.png ')";
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]    
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1858,7 +1864,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/dust" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1875,14 +1881,15 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/dust" + num2 + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });   
 }
 
 function travelVolcanicAshInfo(){ 
 // travel 
    
-var num2=0;    
+var num2=0; 
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=qcWcWqbTE8GUjQOR-aaIAw&q=game+to+play+at+home&oq=game+to+play+at+home&gs_l=psy-ab.3..0j0i203k1j0l2j0i22i30k1l6.11755.25115.0.25444.22.22.0.0.0.0.99.1333.22.22.0....0...1.1j4.64.psy-ab..0.22.1331...0i7i30k1j0i7i10i30k1j0i13k1j35i39k1j0i131i67k1j0i67k1j0i131i20i263k1j0i20i263k1j0i22i10i30k1.0.dfzoaNfa8YY", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=BMacWpGqDIi4jwO26KS4Ag&q=indoors+activities&oq=Indoors+activi&gs_l=psy-ab.1.0.0l10.6901.12471.0.14571.7.7.0.0.0.0.54.321.7.7.0....0...1.1.64.psy-ab..0.7.320...0i67k1j0i10k1j0i20i263k1.0.g7zdR7ICIag"]    
 var travelH = ["House", "Indoors"];      
 var travelInfo = ["Volcano in your area erupted, blowing hot ash all over your area. In weather conditions like these, it is highly recommended to stay indoors until situation gets lighten. You house is a great place to stay, since all of the things are there until the volcano situation blows over.", "Volcano in your area erupted, blowing hot ash all over your area. In weather conditions like these, it is highly recommended to stay indoors until situation gets lighten. But if you need to get out today, I recommend staying indoors at all times. Indoors such as art gallery, museums, and other places that are in a large building are a great place to stay until the volcano situation blows over."];
     
@@ -1890,7 +1897,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh0.pn
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0] 
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1905,7 +1912,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1922,7 +1929,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + 
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });   
     
 }
@@ -1931,6 +1938,7 @@ function travelSquallsInfo(){
 // travel 
    
 var num2=0;    
+var leanMore = ["https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=qcWcWqbTE8GUjQOR-aaIAw&q=game+to+play+at+home&oq=game+to+play+at+home&gs_l=psy-ab.3..0j0i203k1j0l2j0i22i30k1l6.11755.25115.0.25444.22.22.0.0.0.0.99.1333.22.22.0....0...1.1j4.64.psy-ab..0.22.1331...0i7i30k1j0i7i10i30k1j0i13k1j35i39k1j0i131i67k1j0i67k1j0i131i20i263k1j0i20i263k1j0i22i10i30k1.0.dfzoaNfa8YY", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=BMacWpGqDIi4jwO26KS4Ag&q=indoors+activities&oq=Indoors+activi&gs_l=psy-ab.1.0.0l10.6901.12471.0.14571.7.7.0.0.0.0.54.321.7.7.0....0...1.1.64.psy-ab..0.7.320...0i67k1j0i10k1j0i20i263k1.0.g7zdR7ICIag"]     
 var travelH = ["House", "Indoors"];     
 var travelInfo = ["Wind and rain are blowing violently in your area. In weather conditions like these, it is highly recommended to stay indoors until situation gets lighten. You house is a great place to stay, since all of the things are there until the weather lightens.", "Wind and rain are blowing violently in your area. In weather conditions like these, it is highly recommended to stay indoors until situation gets lighten. But if you need to get out today, I recommend staying indoors at all times. Indoors such as art gallery, museums, and other places that are in a large building are a great place to stay until the weather lightens"];
     
@@ -1938,7 +1946,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls0.png ')
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]   
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -1953,7 +1961,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -1970,7 +1978,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });   
     
 }
@@ -1984,12 +1992,14 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/tornado0.png ')
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]
+leanMore_travel = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=qcWcWqbTE8GUjQOR-aaIAw&q=game+to+play+at+home&oq=game+to+play+at+home&gs_l=psy-ab.3..0j0i203k1j0l2j0i22i30k1l6.11755.25115.0.25444.22.22.0.0.0.0.99.1333.22.22.0....0...1.1j4.64.psy-ab..0.22.1331...0i7i30k1j0i7i10i30k1j0i13k1j35i39k1j0i131i67k1j0i67k1j0i131i20i263k1j0i20i263k1j0i22i10i30k1.0.dfzoaNfa8YY"    
 }
 
 function travelClearInfo(){ 
 // travel 
    
-var num2=0;    
+var num2=0;
+var leanMore = ["https://www.google.ca/search?q=Park&rlz=1C1CHBF_enCA750CA750&oq=Park&aqs=chrome..69i57j69i61j69i60l2j35i39j0.828j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=RsScWv2lNoHRjAOwmo_ABQ&q=Festival&oq=Festival&gs_l=psy-ab.3..0i67k1j0l6j0i46k1j46l2j0i131k1j0.89577.89577.0.90101.1.1.0.0.0.0.62.62.1.1.0....0...1.1.64.psy-ab..0.1.61....0.mkhtU95ngRA", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=osScWuajCI6AjwOJuYaYAw&q=Art+Gallery&oq=Art+Gallery&gs_l=psy-ab.3..0i67k1j0i131i46k1j46i131k1l2j0j0i131k1j0l6.13672.13672.0.14266.1.1.0.0.0.0.52.52.1.1.0....0...1.1.64.psy-ab..0.1.52....0.y4u89rcqoIE", "https://www.google.ca/search?q=Museum&rlz=1C1CHBF_enCA750CA750&oq=Museum&aqs=chrome..69i57j0l5.3078j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Library&rlz=1C1CHBF_enCA750CA750&oq=Library&aqs=chrome..69i57j69i61j0l4.728j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Night+Club&rlz=1C1CHBF_enCA750CA750&oq=Night+Club&aqs=chrome..69i57j0l5.2279j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Convenience+Store&rlz=1C1CHBF_enCA750CA750&oq=Convenience+Store&aqs=chrome..69i57j0l5.776j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Movie+Theater&rlz=1C1CHBF_enCA750CA750&oq=Movie+Theater&aqs=chrome..69i57j0l5.787j0j9&sourceid=chrome&ie=UTF-8"]      
 var travelH = ["Park", "Festival", "Art Gallery", "Museum", "Library", "Night Club", "Convenience Store", "Movie Theater"];     
 var travelInfo = ["The weather is nice, and a visit to the park is a great idea. Here, you can have a picnic, have a soccer or football match with your buddies, or have a brisk walk with either your family or your dog.", "The weather is nice, a visit to your local festival is a great idea. Here, you can have fun, meet with other people, eat unique and tasty foods, enjoy various kinds of entertainment, and many more.", "The weather is nice, and a visit to your art gallery is a great idea. Art gallery are a great place to visit for you artistic people out there. It contains the most recent artwork done by artist around your area.", "The weather is nice, and a visit to your museum is a great idea. Museums are a great place to visit to learn about history. It contains pieces of artwork and artifacts that is great to look at and learn from.", "The weather is nice, and a visit to your library is a great idea. Libraries are a great place to stay since you can read books and watch movies while you stay there. It contains materials which would keep you entertained or educated.", "The weather is nice, and a visit to a night club is a great idea. Night clubs are a great place to hang out before the weekend, and grab a couple of drinks, and meet with other people.", "The weather is nice, and a visit to your convenience store is a great idea. Convenience stores are a great place that will keep you warm, and to grab things you need for the day.", "The weather is nice, and a visit to your movie theater is a great idea. Movies to kill some time are a great idea."];
     
@@ -1997,7 +2007,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear0.png')";
 
 travel_h1.innerHTML = travelH[0]
 travel_p.innerHTML = travelInfo[0]    
-
+leanMore_travel = leanMore[0]
 //right    
 travel_right.addEventListener("click", function(){ 
 
@@ -2012,7 +2022,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 +
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });
         
 //left
@@ -2029,7 +2039,7 @@ travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 +
 
 travel_h1.innerHTML = travelH[num2]
 travel_p.innerHTML = travelInfo[num2]
-
+leanMore_travel = leanMore[num2]
 });      
     
 }
@@ -2038,7 +2048,7 @@ function travelCloudsInfo(){
 // travel 
    
 var num2=0;
-var leanMore = [""]   
+var leanMore = ["https://www.google.ca/search?q=Park&rlz=1C1CHBF_enCA750CA750&oq=Park&aqs=chrome..69i57j69i61j69i60l2j35i39j0.828j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=RsScWv2lNoHRjAOwmo_ABQ&q=Festival&oq=Festival&gs_l=psy-ab.3..0i67k1j0l6j0i46k1j46l2j0i131k1j0.89577.89577.0.90101.1.1.0.0.0.0.62.62.1.1.0....0...1.1.64.psy-ab..0.1.61....0.mkhtU95ngRA", "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=osScWuajCI6AjwOJuYaYAw&q=Art+Gallery&oq=Art+Gallery&gs_l=psy-ab.3..0i67k1j0i131i46k1j46i131k1l2j0j0i131k1j0l6.13672.13672.0.14266.1.1.0.0.0.0.52.52.1.1.0....0...1.1.64.psy-ab..0.1.52....0.y4u89rcqoIE", "https://www.google.ca/search?q=Museum&rlz=1C1CHBF_enCA750CA750&oq=Museum&aqs=chrome..69i57j0l5.3078j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Library&rlz=1C1CHBF_enCA750CA750&oq=Library&aqs=chrome..69i57j69i61j0l4.728j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Night+Club&rlz=1C1CHBF_enCA750CA750&oq=Night+Club&aqs=chrome..69i57j0l5.2279j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Convenience+Store&rlz=1C1CHBF_enCA750CA750&oq=Convenience+Store&aqs=chrome..69i57j0l5.776j0j9&sourceid=chrome&ie=UTF-8", "https://www.google.ca/search?q=Movie+Theater&rlz=1C1CHBF_enCA750CA750&oq=Movie+Theater&aqs=chrome..69i57j0l5.787j0j9&sourceid=chrome&ie=UTF-8"]   
 var travelH = ["Park", "Festival", "Art Gallery", "Museum", "Library", "Night Club", "Convenience Store", "Movie Theater"];     
 var travelInfo = ["The weather is nice for now , and a visit to the park is a great idea. Here, you can have a picnic, have a soccer or football match with your buddies, or have a brisk walk with either your family or your dog.", "The weather is nice for now, a visit to your local festival is a great idea. Here, you can have fun, meet with other people, eat unique and tasty foods, enjoy various kinds of entertainment, and many more.", "The weather is nice for now, and a visit to your art gallery is a great idea. Art gallery are a great place to visit for you artistic people out there. It contains the most recent artwork done by artist around your area.", "The weather is nice for now, and a visit to your museum is a great idea. Museums are a great place to visit to learn about history. It contains pieces of artwork and artifacts that is great to look at and learn from.", "The weather is nice for now, and a visit to your library is a great idea. Libraries are a great place to stay since you can read books and watch movies while you stay there. It contains materials which would keep you entertained or educated.", "The weather is nice for now, and a visit to a night club is a great idea. Night clubs are a great place to hang out before the weekend, and grab a couple of drinks, and meet with other people.", "The weather is nice for now, and a visit to your convenience store is a great idea. Convenience stores are a great place that will keep you warm, and to grab things you need for the day.", "The weather is nice for now, and a visit to your movie theater is a great idea. Movies to kill some time are a great idea."];
     
