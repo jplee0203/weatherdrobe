@@ -74,6 +74,12 @@ toggleBut.addEventListener("click", function(){
 function umbrellaWeather(){
    genderCase = 2;
    wearDiv1.style.display = "block"; 
+    wearDiv2.style.top = "20%";
+    wearDiv3.style.top = "40%";
+    wearDiv4.style.top = "60%";
+    wearDiv5.style.top = "80%";    
+
+    
    outwearIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
    outwearP.innerHTML = "Outerwear";    
                  
@@ -96,6 +102,10 @@ function coldWeather(){
     
   genderCase = 1;    
    wearDiv1.style.display = "block";
+    wearDiv2.style.top = "20%";
+    wearDiv3.style.top = "40%";
+    wearDiv4.style.top = "60%";
+    wearDiv5.style.top = "80%";
     
    outwearIcon.style.backgroundImage = "URL('./img/wearIcon/outerwear.png')";
    outwearP.innerHTML = "Outerwear";    
@@ -117,7 +127,11 @@ function coldWeather(){
 // shirts shoes
 function hotWeather(){
      genderCase = 2;
-   wearDiv1.style.display = "none";   
+   wearDiv1.style.display = "none"; 
+    wearDiv2.style.top = 0;
+    wearDiv3.style.top = "20%";
+    wearDiv4.style.top = "40%";
+    wearDiv5.style.top = "60%";
                  
    shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirts-woman.png')";
    shirtP.innerHTML = "Shirt";
@@ -132,7 +146,6 @@ function hotWeather(){
    accessoriesP.innerHTML = "Accessories";
                 
 }
-
 
 
 
