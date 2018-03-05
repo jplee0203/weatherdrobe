@@ -3,8 +3,6 @@ var m2 = 0;
 var timer = null;
 var mOver = false;
 
-
-
 document.getElementById("body_scroll").onscroll = function(){
     document.getElementById("navigation").style.top= 0;
     document.getElementById("navigation").style.transition = "top 1s";
@@ -133,6 +131,9 @@ document.getElementById("goWear_Future").addEventListener("click", function(){
  document.getElementById("logoDiv").addEventListener("click", function(){
     goHome()
 }); 
+ document.getElementById("footer2_logo").addEventListener("click", function(){
+    goHome()
+}); 
 
 
 
@@ -231,4 +232,18 @@ document.getElementById("day5").addEventListener("click", function(){
     document.getElementById("day4").className = "forecast4" 
     
     document.getElementById("day5").className = "forecast5_clicked"
+});
+
+
+document.getElementById("alex").addEventListener("click", function(){
+    window.open("http://jplee.ca/");
+});
+document.getElementById("ben").addEventListener("click", function(){
+    window.open("https://liuben.ca/home/");
+});
+document.getElementById("jacky").addEventListener("click", function(){
+
+});
+document.getElementById("keiju").addEventListener("click", function(){
+   window.open("https://keijusekiguchi.com/wp/");
 });

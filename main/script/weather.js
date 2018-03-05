@@ -16,8 +16,19 @@ var pantsP = document.getElementById("pantsP");
 var shoesP = document.getElementById("shoesP");
 var accessoriesP = document.getElementById("accessoriesP");
 var wearDiv1 = document.getElementById("wearDiv1");
+var wearDiv2 = document.getElementById("wearDiv2");
+var wearDiv3 = document.getElementById("wearDiv3");
+var wearDiv4 = document.getElementById("wearDiv4");
+var wearDiv5 = document.getElementById("wearDiv5");
+
 var toggleBut = document.getElementById("toggleMF");
+var toggleBut2 = document.getElementById("toggleMF2");
 var genderCase = 0;
+var shirtIcon2= document.getElementById("shirtIcon_Future");
+var shoesIcon2= document.getElementById("shoesIcon_Future");  
+var leanMore_weather = "https://github.com/jplee0203/weatherdrobe";
+var leanMore_travel = "https://github.com/jplee0203/weatherdrobe";
+
 //var city;
 var country;
 
@@ -40,25 +51,24 @@ toggleBut.addEventListener("click", function(){
      
  } 
 
-  
-//    if(toggleBut.checked) {  
-//       
-//  if(shoesIcon.style.backgroundImage === "URL('./img/wearIcon/shoes-shoes-man.png')"){}
-//   
-//  
-//   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirts-woman.png')";
-//  
-//    } 
-//    else {   
-//   
-//         
-//       shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
-//     shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
-//    }
-    
+});
 
-
-}); 
+//toggleBut2.addEventListener("click", function(){  
+//
+//     if(genderCase == 1){
+//     if(toggleBut2.checked) { shoesIcon2.style.backgroundImage = "URL('./img/wearIcon/shoes-woman.png')"
+//    } else { shoesIcon2.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')"; }
+//     
+// } else if (genderCase == 2) {
+//      if(toggleBut2.checked) { shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-woman.png')";
+//             shirtIcon2.style.backgroundImage = "URL('./img/wearIcon/shirts-woman.png')";
+//    } else { shoesIcon2.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+//             shirtIcon2.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
+//           }
+//     
+// } 
+//
+//}); 
 
 // shirts && shoes 
 function umbrellaWeather(){
@@ -338,6 +348,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     coldWeather();
     snowWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?q=Snow&rlz=1C1CHBF_enCA750CA750&oq=Snow&aqs=chrome..69i57j69i61j35i39j0l3.576j0j7&sourceid=chrome&ie=UTF-8";
     
 } else if(current_condition === "Thunderstorm"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/thunderstorm.svg')";
@@ -347,6 +358,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     umbrellaWeather(); 
     thunderstormWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?q=Thunderstorm&rlz=1C1CHBF_enCA750CA750&oq=Thunderstorm&aqs=chrome..69i57j35i39j0l4.634j0j9&sourceid=chrome&ie=UTF-8";
    
 } else if(current_condition === "Drizzle"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/shower.svg')";
@@ -356,6 +368,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     umbrellaWeather(); 
     drizzleWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?q=Drizzle&rlz=1C1CHBF_enCA750CA750&oq=Drizzle&aqs=chrome..69i57j0l5.4147j0j9&sourceid=chrome&ie=UTF-8";
     
 } else if(current_condition === "Rain"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/rain.svg')";
@@ -365,6 +378,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     umbrellaWeather(); 
     rainWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?q=Rain&rlz=1C1CHBF_enCA750CA750&oq=Rain&aqs=chrome..69i57j69i61j35i39j0l3.689j0j7&sourceid=chrome&ie=UTF-8";
     
 }else if(current_condition === "Mist" || current_condition === "Fog"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -374,6 +388,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     mistWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=D22cWtH9E83EjwOpjLOwAw&q=Mist+and+Fog&oq=Mist+and+Fog&gs_l=psy-ab.3..0i67k1l2j0l4j0i30k1l4.31808.33208.0.33408.4.4.0.0.0.0.165.457.2j2.4.0....0...1.1.64.psy-ab..0.4.456...0i7i30k1.0.PQ5HJhnb99c";
     
 } else if( current_condition === "Smoke" || current_condition === "Haze"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -383,6 +398,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     hazeWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=MW2cWsmVPJSkjQP837CADQ&q=smoke+and+haze&oq=Smoke+and+ha&gs_l=psy-ab.1.1.0l3j0i22i30k1l7.22322.24319.0.25336.3.3.0.0.0.0.81.221.3.3.0....0...1.1.64.psy-ab..0.3.218...0i7i30k1.0.o890Bzwr4Jo";
     
 } else if(current_condition === "Sand, dust whirls" || current_condition === "Sand" || current_condition === "Dust"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -392,6 +408,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     sandWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=TG2cWufYKtDgjwPG2ZrYDA&q=Sand%2C+dust+whirls%2C+Sand+and+Dust&oq=Sand%2C+dust+whirls%2C+Sand+and+Dust&gs_l=psy-ab.3..33i160k1l2.50557.70272.0.70560.12.10.2.0.0.0.165.779.9j1.10.0....0...1.1.64.psy-ab..0.5.478...35i39k1.0.dKCP3Ou37oo";
     
 } else if(current_condition === "Volcanic ash"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -401,6 +418,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     volcanicAshWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=lG2cWsP8NciEjwOG_JjIAQ&q=Volcanic+ash&oq=Volcanic+ash&gs_l=psy-ab.3..35i39k1j0i67k1j0l8.14002.14002.0.14357.1.1.0.0.0.0.114.114.0j1.1.0....0...1.1.64.psy-ab..0.1.113....0.Sndp16JwEss";
     
 } else if(current_condition === "Squalls" || current_condition === "Tornado"){
      current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -410,6 +428,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     squallsWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=4G2cWtfbJd2qjQPVvovgBA&q=Squalls+and+Tornado&oq=Squalls+and+Tornado&gs_l=psy-ab.3..33i22i29i30k1l2.36346.43147.0.43626.7.7.0.0.0.0.110.625.4j3.7.0....0...1.1.64.psy-ab..0.7.625...0j35i39k1j0i10k1j0i20i263k1j0i203k1j0i22i30k1j0i22i10i30k1.0.e3SK_soLE_k";
     
 } else if(current_condition === "Clear"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky.svg')";
@@ -419,6 +438,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     clearWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=DW6cWuikGInQjwOzvbeQCw&q=Clear+day&oq=Clear+day&gs_l=psy-ab.3..35i39k1j0l9.39742.42659.0.42760.7.6.1.0.0.0.106.463.5j1.6.0....0...1.1.64.psy-ab..0.7.504...0i131i67k1j0i67k1j0i131k1.0.hrnkz4QaQ0s";
    
 } else if(current_condition === "Clouds"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/scattered-clouds.svg')";
@@ -428,6 +448,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     cloudsWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=TW6cWs2NOo2ajwOZtrOgBQ&q=Clouds+day&oq=Clouds+day&gs_l=psy-ab.3..0j0i22i30k1l9.459.873.0.1048.3.3.0.0.0.0.132.336.1j2.3.0....0...1.1.64.psy-ab..0.3.335...0i20i263k1j0i10k1.0.hvpl1FAuwGs";
     
 } else {
     FollowTempWear();
@@ -629,15 +650,15 @@ function FollowTempWear(){
    coldWeather();     
   }         
 }                
-                            
 if(current_condition === "Snow"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/snow.svg')";
     checkWeather_img.style.backgroundImage = "URL('./img/WeatherIcon/snow-text.svg')";
     home_containerImg.style.backgroundImage = "URL('./img/backgrounds/Snow1.jpg')";
     header2_img.style.backgroundImage = "URL('./img/backgrounds/Snow2.jpg')";
     con.innerHTML = "";
-    coldWeather(); 
+    coldWeather();
     snowWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?q=Snow&rlz=1C1CHBF_enCA750CA750&oq=Snow&aqs=chrome..69i57j69i61j35i39j0l3.576j0j7&sourceid=chrome&ie=UTF-8";
     
 } else if(current_condition === "Thunderstorm"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/thunderstorm.svg')";
@@ -647,6 +668,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     umbrellaWeather(); 
     thunderstormWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?q=Thunderstorm&rlz=1C1CHBF_enCA750CA750&oq=Thunderstorm&aqs=chrome..69i57j35i39j0l4.634j0j9&sourceid=chrome&ie=UTF-8";
    
 } else if(current_condition === "Drizzle"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/shower.svg')";
@@ -656,6 +678,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     umbrellaWeather(); 
     drizzleWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?q=Drizzle&rlz=1C1CHBF_enCA750CA750&oq=Drizzle&aqs=chrome..69i57j0l5.4147j0j9&sourceid=chrome&ie=UTF-8";
     
 } else if(current_condition === "Rain"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/rain.svg')";
@@ -665,6 +688,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     umbrellaWeather(); 
     rainWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?q=Rain&rlz=1C1CHBF_enCA750CA750&oq=Rain&aqs=chrome..69i57j69i61j35i39j0l3.689j0j7&sourceid=chrome&ie=UTF-8";
     
 }else if(current_condition === "Mist" || current_condition === "Fog"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -674,6 +698,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     mistWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=D22cWtH9E83EjwOpjLOwAw&q=Mist+and+Fog&oq=Mist+and+Fog&gs_l=psy-ab.3..0i67k1l2j0l4j0i30k1l4.31808.33208.0.33408.4.4.0.0.0.0.165.457.2j2.4.0....0...1.1.64.psy-ab..0.4.456...0i7i30k1.0.PQ5HJhnb99c";
     
 } else if( current_condition === "Smoke" || current_condition === "Haze"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -683,6 +708,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     hazeWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=MW2cWsmVPJSkjQP837CADQ&q=smoke+and+haze&oq=Smoke+and+ha&gs_l=psy-ab.1.1.0l3j0i22i30k1l7.22322.24319.0.25336.3.3.0.0.0.0.81.221.3.3.0....0...1.1.64.psy-ab..0.3.218...0i7i30k1.0.o890Bzwr4Jo";
     
 } else if(current_condition === "Sand, dust whirls" || current_condition === "Sand" || current_condition === "Dust"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -692,6 +718,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     sandWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=TG2cWufYKtDgjwPG2ZrYDA&q=Sand%2C+dust+whirls%2C+Sand+and+Dust&oq=Sand%2C+dust+whirls%2C+Sand+and+Dust&gs_l=psy-ab.3..33i160k1l2.50557.70272.0.70560.12.10.2.0.0.0.165.779.9j1.10.0....0...1.1.64.psy-ab..0.5.478...35i39k1.0.dKCP3Ou37oo";
     
 } else if(current_condition === "Volcanic ash"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -701,6 +728,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     volcanicAshWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=lG2cWsP8NciEjwOG_JjIAQ&q=Volcanic+ash&oq=Volcanic+ash&gs_l=psy-ab.3..35i39k1j0i67k1j0l8.14002.14002.0.14357.1.1.0.0.0.0.114.114.0j1.1.0....0...1.1.64.psy-ab..0.1.113....0.Sndp16JwEss";
     
 } else if(current_condition === "Squalls" || current_condition === "Tornado"){
      current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/mist.svg')";
@@ -710,6 +738,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     squallsWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=4G2cWtfbJd2qjQPVvovgBA&q=Squalls+and+Tornado&oq=Squalls+and+Tornado&gs_l=psy-ab.3..33i22i29i30k1l2.36346.43147.0.43626.7.7.0.0.0.0.110.625.4j3.7.0....0...1.1.64.psy-ab..0.7.625...0j35i39k1j0i10k1j0i20i263k1j0i203k1j0i22i30k1j0i22i10i30k1.0.e3SK_soLE_k";
     
 } else if(current_condition === "Clear"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/clear-sky.svg')";
@@ -719,6 +748,7 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     clearWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=DW6cWuikGInQjwOzvbeQCw&q=Clear+day&oq=Clear+day&gs_l=psy-ab.3..35i39k1j0l9.39742.42659.0.42760.7.6.1.0.0.0.106.463.5j1.6.0....0...1.1.64.psy-ab..0.7.504...0i131i67k1j0i67k1j0i131k1.0.hrnkz4QaQ0s";
    
 } else if(current_condition === "Clouds"){
     current_conditionImg.style.backgroundImage = "URL('./img/WeatherIcon/scattered-clouds.svg')";
@@ -728,12 +758,13 @@ if(current_condition === "Snow"){
     con.innerHTML = "";
     FollowTempWear();
     cloudsWeatherInfo();
+    leanMore_weather = "https://www.google.ca/search?rlz=1C1CHBF_enCA750CA750&ei=TW6cWs2NOo2ajwOZtrOgBQ&q=Clouds+day&oq=Clouds+day&gs_l=psy-ab.3..0j0i22i30k1l9.459.873.0.1048.3.3.0.0.0.0.132.336.1j2.3.0....0...1.1.64.psy-ab..0.3.335...0i20i263k1j0i10k1.0.hvpl1FAuwGs";
     
 } else {
     FollowTempWear();
     con.innerHTML = current_condition;
 } 
-// End     
+// End      
    
                 
                 
@@ -757,16 +788,28 @@ var suggestion_p = document.getElementById("suggestion_p");
 var suggestion_h1 = document.getElementById("suggestion_h1");
 var learnWeater = document.getElementById("learnWeater");
 
+var travel_show = document.getElementById("travel_show");
+var travel_left = document.getElementById("travel_left");
+var travel_right = document.getElementById("travel_right");
+var travel_p = document.getElementById("travel_p");
+var travel_h1 = document.getElementById("travel_h1");
+var learnTravel = document.getElementById("learnTravel");
+
+learnWeater.addEventListener("click", function(){  
+  window.open(leanMore_weather);
+});
+
+learnTravel.addEventListener("click", function(){  
+  window.open(leanMore_travel);
+});
+
+
 //weather info _ haze&smoke 
 function hazeWeatherInfo(){
     
-learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Haze");
-});       
-
 var num=0;
     
-var weatherInfo = ["Haze is traditionally an atmospheric phenomenon in which dust, smoke, and other dry particulates obscure the clarity of the sky. The World Meteorological Organization manual of codes includes a classification of horizontal obscuration into categories of fog, ice fog, steam fog, mist, haze, smoke, volcanic ash, dust, sand, and snow. Sources for haze particles include farming (ploughing in dry weather), traffic, industry, and wildfires.", "Seen from afar (e.g. an approaching airplane) and depending on the direction of view with respect to the Sun, haze may appear brownish or bluish, while mist tends to be bluish grey. Whereas haze often is thought of as a phenomenon of dry air, mist formation is a phenomenon of humid air. However, haze particles may act as condensation nuclei for the subsequent formation of mist droplets; such forms of haze are known as wet haze.", "In meteorological literature, the word haze is generally used to denote visibility-reducing aerosols of the wet type. Such aerosols commonly arise from complex chemical reactions that occur as sulfur dioxide gases emitted during combustion are converted into small droplets of sulfuric acid. The reactions are enhanced in the presence of sunlight, high relative humidity, and stagnant air flow. A small component of wet-haze aerosols appear to be derived from compounds released by trees, such as terpenes. For all these reasons, wet haze tends to be primarily a warm-season phenomenon." ];
+var weatherInfo = ["These are usually caused when a nearby forest is burning, and the smoke is drifting through your area, or smoke is trapped in our atmosphere, creating a foggy view of your town.", "It is recommended to stay indoors to avoid breathing in the CO2, but if you are required to head out today, I would recommend dressing up wearing something cool (t-shirts, maybe shorts or pants that does not go tightly onto your leg), while also having some cover to your eyes, and a scarf to cover your mouth and nose to avoid breathing in CO2.", "For drivers, you should avoid driving long periods of time, and move at a slower speed." ];
     
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/haze0.png ')"; 
 
@@ -804,20 +847,60 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/haze" + nu
 suggestion_p.innerHTML = weatherInfo[num]
 
 });
+    
+////////////////////  travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});    
+   
 }
 
 
 
 //weather info _ snow
 function snowWeatherInfo(){
-
-learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Snow");
-});      
-    
+  
 var num=0;
 //3    
-var weatherInfo = ["Snow develops in clouds that themselves are part of a larger weather system. The physics of snow crystal development in clouds results from a complex set of variables that include moisture content and temperatures. The resulting shapes of the falling and fallen crystals can be classified into a number of basic shapes and combinations, thereof. Occasionally, some plate-like, dendritic and stellar-shaped snowflakes can form under clear sky with a very cold temperature inversion present.", "Snow clouds usually occur in the context of larger weather systems, the most important of which is the low pressure area, which typically incorporate warm and cold fronts as part of their circulation. Two additional and locally productive sources of snow are lake-effect (also sea-effect) storms and elevation effects, especially in mountains.", "Mid-latitude cyclones are low pressure areas which are capable of producing anything from cloudiness and mild snow storms to heavy blizzards. During a hemisphere's fall, winter, and spring, the atmosphere over continents can be cold enough through the depth of the troposphere to cause snowfall. In the Northern Hemisphere, the northern side of the low pressure area produces the most snow." ];
+var weatherInfo = ["It’s cold out! Blanket of snow all over your city! It is recommended to stay indoors for people who are taking the bus or driving to somewhere.", "If you need to head out today, you need to dress warm from top to bottom; I recommend wearing a sweater underneath your jacket, a warm hat, and boots that can resist water, keeps traction and keep your feet warm.", "When heading out, you should avoid deep snow, and sidewalks that are covered with powdered snow for drivers to avoid losing traction or skidding (so drive in a lower speed and more distance between your car and the car in front of you)." ];
 //1    
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/snow0.png ')"; 
 //1    
@@ -851,18 +934,58 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/snow" + nu
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+////////////////////  travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+    
 }
 
 //weather info _ Thunderstorm
 function thunderstormWeatherInfo(){
 
- learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Thunderstorm");
-});  
-    
 var num=0;
     
-var weatherInfo = ["A thunderstorm, also known as an electrical storm, lightning storm, or thundershower, is a storm characterized by the presence of lightning and its acoustic effect on the Earth's atmosphere, known as thunder. Thunderstorms occur in association with a type of cloud known as a cumulonimbus. They are usually accompanied by strong winds, heavy rain, and sometimes snow, sleet, hail, or, in contrast, no precipitation at all. ", "Thunderstorms may line up in a series or become a rainband, known as a squall line. Strong or severe thunderstorms, known as supercells, rotate as do cyclones. While most thunderstorms move with the mean wind flow through the layer of the troposphere that they occupy, vertical wind shear sometimes causes a deviation in their course at a right angle to the wind shear direction.", "Any precipitation falls the long distance through the clouds towards the Earth's surface. As the droplets fall, they collide with other droplets and become larger. The falling droplets create a downdraft as it pulls cold air with it, and this cold air spreads out at the Earth's surface, occasionally causing strong winds that are commonly associated with thunderstorms." ];
+var weatherInfo = ["The sky is rumbling… It may sound far away, but I recommend avoiding the outdoor for long periods of time, and staying either in a building or in a car in case the thunder strike at your area, and the winds get stronger.", "In case of rain, you should dress appropriate in case you go out tonight for an important meeting; I recommend wearing a rain coat, boots that can resist water, and new pair of pants and shirt in case you get wet anyway. ", "Umbrellas can also be used, but try to avoid using them when the winds get stronger to avoid getting your umbrella destroyed. When you are out in a middle of the thunderstorm, try to avoid staying next to something metal, underneath trees, and try to stay indoors such as stores or station until the thunder blows over." ];
   
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/thunderstorm0.png ')"; 
     
@@ -894,19 +1017,59 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/thundersto
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+
+////////////////////  travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});    
+    
 }
 
 //weather info _ drizzle
 
 function drizzleWeatherInfo(){
 
- learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Drizzle");
-});     
-    
 var num=0;
     
-var weatherInfo = ["Drizzle is a light liquid precipitation consisting of liquid water drops smaller than those of rain – generally smaller than 0.5 mm (0.02 in) in diameter. Drizzle is normally produced by low stratiform and stratocumulus clouds. Precipitation rates from drizzle are on the order of a millimetre per day or less at the ground. Owing to the small size of drizzle drops, under many circumstances drizzle largely evaporates before reaching the surface and so may be undetected by observers on the ground.", "While most drizzle has only a minor immediate impact upon humans, freezing drizzle can lead to treacherous conditions. Freezing drizzle occurs when supercooled drizzle drops land on a surface whose temperature is below freezing. These drops immediately freeze upon impact, leading to the buildup of sheet ice (sometimes called black ice) on the surface of roads.", "Drizzle tends to be the most frequent form of precipitation over large areas of the world's oceans, particularly in the colder regions of the subtropics. These regions are dominated by shallow marine stratocumulus and trade wind cumulus clouds, which exist entirely within the marine boundary layer. Despite the low rates of surface accumulation, it has become apparent that drizzle actually exerts a major influence over the cloud structure, coverage, and radiative properties in these regions." ];
+var weatherInfo = ["It looks like it’s going to rain lightly today… But you should always prepare for the worse. Drizzle might turn into rain, which would make you soaked. You should dress-up warm for today, but maybe just a jacket and normal pants and shoes would be fine.", "But an umbrella is recommended in case it starts raining heavily, or you just don’t want to get wet today.", "There is nothing to worry when it is just a drizzle, but it recommended that you prepare and bring along your umbrella in case the weather change drastically." ];
    
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/drizzle0.png ')"; 
   
@@ -934,19 +1097,59 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/drizzle" +
 } 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+////////////////////  travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});  
+    
 }
 
 
 //weather info _ rain
 function rainWeatherInfo(){
-    
- learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Rain");
-});     
-
+ 
 var num=0;
   
-var weatherInfo = ["Rain is liquid water in the form of droplets that have condensed from atmospheric water vapor and then becomes heavy enough to fall under gravity. Rain is a major component of the water cycle and is responsible for depositing most of the fresh water on the Earth. It provides suitable conditions for many types of ecosystems, as well as water for hydroelectric power plants and crop irrigation.", "The major cause of rain production is moisture moving along three-dimensional zones of temperature and moisture contrasts known as weather fronts. If enough moisture and upward motion is present, precipitation falls from convective clouds (those with strong upward vertical motion) such as cumulonimbus (thunder clouds) which can organize into narrow rainbands.", "In mountainous areas, heavy precipitation is possible where upslope flow is maximized within windward sides of the terrain at elevation which forces moist air to condense and fall out as rainfall along the sides of mountains. On the leeward side of mountains, desert climates can exist due to the dry air caused by downslope flow which causes heating and drying of the air mass. The movement of the monsoon trough, or intertropical convergence zone, brings rainy seasons to savannah climes." ];
+var weatherInfo = ["Uh oh… It’s pouring rain outside. It is important to stay warm and dry.", "If you are heading out today, I recommend the following to avoid getting wet and catching a cold; either a raincoat or jacket that keeps water out, rain boots, and an umbrella.", "Since it is raining out everywhere you go, always hold on your umbrella, or wear your raincoat, and avoid puddles. For drivers, it is important to drive slowly to avoid loss of traction." ];
 
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/rain0.png ')"; 
  
@@ -980,18 +1183,58 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/rain" + nu
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});        
+  
 }
 
 //weather info _ Mist
 function mistWeatherInfo(){
 
- learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Mist");
-});      
-
 var num=0;
    
-var weatherInfo = ["Mist is a phenomenon caused by small droplets of water suspended in air. Physically, it is an example of a dispersion. It is most commonly seen where warm, moist air meets sudden cooling, such as in exhaled air in the winter, or when throwing water onto the hot stove of a sauna.", "It can be created artificially with aerosol canisters if the humidity and temperature conditions are right. It can also occur as part of natural weather, when humid air cools rapidly, for example when the air comes into contact with surfaces that are much cooler than the air.", "The formation of mist, as of other suspensions, is greatly aided by the presence of nucleation sites on which the suspended water phase can congeal. Thus even such unusual sources as small particulates from volcanic eruptions, releases of strongly polar gases, and even the magnetospheric ions associated with polar lights can in right conditions trigger the formation of mist." ];
+var weatherInfo = ["It is hard to see where you’re going today. It is recommended to stay indoors to avoid getting hit by people who can’t see in the fog.", "IF you need to head out today, you will need to dress warm and something that does not blend with the fog; a jacket maybe enough.", "When you are out, don’t try to rush through the sidewalk, or you might bump into someone, and try to avoid walking in roads for cars (if you have to, try walking at the side to avoid getting hit by cars). For drivers, always remember to drive slowly, with your lights on." ];
    
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/mist0.png ')"; 
   
@@ -1025,18 +1268,58 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/mist" + nu
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});      
+    
 }
 
 //weather info _ Sand, dust whirls
 function sandWeatherInfo(){
     
-learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Dust_storm");
-});     
-
 var num=0;
    
-var weatherInfo = ["A dust storm is a meteorological phenomenon common in arid and semi-arid regions. Dust storms arise when a gust front or other strong wind blows loose sand and dirt from a dry surface. Fine particles are transported by saltation and suspension, a process that moves soil from one place and deposits it in another.", "Drylands around North Africa and the Arabian peninsula are the main terrestrial sources of airborne dust. Also with some contributions from Iran, Pakistan and India into the Arabian Sea, and China's significant storms deposit dust in the Pacific. It has been argued that recently, poor management of the Earth's drylands, such as neglecting the fallow system, are increasing dust storms size and frequency from desert margins and changing both the local and global climate, and also impacting local economies.", "The term sandstorm is used most often in the context of desert sandstorms, especially in the Sahara Desert, or places where sand is a more prevalent soil type than dirt or rock, when, in addition to fine particles obscuring visibility, a considerable amount of larger sand particles are blown closer to the surface." ];
+var weatherInfo = ["It’s dry and hot, and to make matters worse, sand and dusts are flying everywhere at your area.  I would recommend staying indoors.", "But if it is necessary , but if you are required to head out today, I would recommend staying outside for shorts periods of time while staying inside buildings, and dressing up wearing something cool (t-shirts, maybe shorts or pants that does not go tightly onto your leg), while also having some cover to your eyes, and a scarf to cover your mouth and nose to avoid having sand or dust in your lungs.", "For drivers, you should avoid driving long periods of time, and move at a slower speed." ];
     
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/sdWhirls0.png ')"; 
  
@@ -1070,19 +1353,59 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/sdWhirls" 
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});         
+    
 }
 
 
 //weather info _ VolcanicAsh
 function volcanicAshWeatherInfo(){
     
-learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Volcanic_ash");
-});     
-
 var num=0;
   
-var weatherInfo = ["Volcanic ash consists of fragments of pulverized rock, minerals and volcanic glass, created during volcanic eruptions and measuring less than 2 mm in diameter. The term volcanic ash is also often loosely used to refer to all explosive eruption products, including particles larger than 2mm. Volcanic ash is formed during explosive volcanic eruptions when dissolved gases in magma expand and escape violently into the atmosphere.", "The force of the escaping gas shatters the magma and propels it into the atmosphere where it solidifies into fragments of volcanic rock and glass. Ash is also produced when magma comes into contact with water during phreatomagmatic eruptions, causing the water to explosively flash to steam leading to shattering of magma. Once in the air, ash is transported by wind up to thousands of kilometers away.", "Due to its wide dispersal, ash can have a number of impacts on society, including human and animal health, disruption to aviation, disruption to critical infrastructure (e.g., electric power supply systems, telecommunications, water and waste-water networks, transportation), primary industries (e.g., agriculture), buildings and structures." ];
+var weatherInfo = ["This is when a volcanic mountain erupted shooting our burning-hot lava and volcanic ashes to the atmosphere.", "It is extremely recommended to stay indoors, but if you do have to go outdoors, you still need to stay indoors, and travel by car or bus if you have to. Wear something that can protect you from the volcanic ash, such as a jacket, long pants and sleeves, and a hat.", "It is also recommended to wear eye protection. For car drivers, it is best to drive for shorter period of time." ];
     
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/volcanicAsh0.png ')"; 
     
@@ -1116,19 +1439,59 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/volcanicAs
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});   
+    
 }
 
 
 //weather info _ squalls
 function squallsWeatherInfo(){
 
-learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Squall");
-});     
-    
 var num=0;
      
-var weatherInfo = ["A squall is a sudden, sharp increase in wind speed that is usually associated with active weather, such as rain showers, thunderstorms, or heavy snow. Squalls refer to an increase in the sustained winds over a short time interval, as there may be higher gusts during a squall event. They usually occur in a region of strong mid-level height falls.", "squall is used to refer to a sudden wind-speed increase, both historically and in the present day. In 1962 the World Meteorological Organization defined that to be classified as a squall, the wind must increase at least 8 m/s and must attain a top speed of at least 11 m/s, lasting at least one minute in duration.", "A tornado is a rapidly rotating column of air that is in contact with both the surface of the Earth and a cumulonimbus cloud or, in rare cases, the base of a cumulus cloud. They are often referred to as twisters, whirlwinds or cyclones, although the word cyclone is used in meteorology to name a weather system with a low-pressure area in the center around which winds blow counterclockwise." ];
+var weatherInfo = ["The outside is violently blowing winds in the area, and it is highly recommended to stay indoors at all times.", "Avoid driving or going outside because it is highly dangerous right now.", "But it is recommended to wear something warm such as a jacket, long pants and shirt, and spare clothing in case the one you are wearing gets wet, and stay indoors (possibly inside your basement with your door and windows nailed shut)." ];
      
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/squalls0.png ')"; 
     
@@ -1162,19 +1525,59 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/squalls" +
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});   
+    
 }
 
 
 //weather info _ clear
 function clearWeatherInfo(){
     
-learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Travel");
-});    
-
 var num=0;
   
-var weatherInfo = ["You can travel. Travel may be local, regional, national (domestic) or international. In some countries, non-local internal travel may require an internal passport, while international travel typically requires a passport and visa. A trip may also be part of a round-trip, which is a particular type of travel whereby a person moves from one location to another and returns.", "Authorities emphasize the importance of taking precautions to ensure travel safety. When traveling abroad, the odds favor a safe and incident-free trip, however, travelers can be subject to difficulties, crime and violence.", "Some safety considerations include being aware of one's surroundings, avoiding being the target of a crime, leaving copies of one's passport and itinerary information with trusted people, obtaining medical insurance valid in the country being visited and registering with one's national embassy when arriving in a foreign country." ];
+var weatherInfo = ["It is clear outside, and is a perfect day to go outside for a brisk walk, talking a drive through your town, or anything you can imagine.", "Though, depending on the weather, what you can wear can vary, but it is not recommended to wear something warm.", "For summer time, it is recommended to wear something that keeps you cool (possibly a t-shirt, and shorts), but always carry a jacket in case the wind starts to blow in your area. In the winter or early spring time, it is recommended to wear something warm, but maybe just a jacket would be enough, and long pants to avoid cold winds." ];
     
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/clear0.png ')"; 
 //1    
@@ -1208,20 +1611,60 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/clear" + n
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});      
+    
 }
 
 
 
 //weather info _ Clouds
 function cloudsWeatherInfo(){
-      
-learnWeater.addEventListener("click", function(){  
-  window.open("https://en.wikipedia.org/wiki/Cloud");
-});
-    
+ 
 var num=0;
   
-var weatherInfo = ["In meteorology, a cloud is an aerosol comprising a visible mass of minute liquid droplets, frozen crystals, or particles suspended in the atmosphere above the surface of a planetary body. The droplets and crystals may be made of water or various chemicals.", "Two cirriform clouds that form higher up in the stratosphere and mesosphere have common names for their main types. They are seen infrequently, mostly in the polar regions of Earth. Clouds have been observed in the atmospheres of other planets and moons in the Solar System and beyond. ", "Taken as a whole, homospheric clouds can be cross-classified by form and level to derive the ten tropospheric genera and the two additional major types above the troposphere." ];
+var weatherInfo = ["It’s cloudy out, but it is currently not raining. I would recommend wearing something slightly warm such as a jacket or a long-sleeved shirt and long pants.", "IT is recommended to bring along an umbrella (maybe a compact one) in case the weather starts to get a little wet.", "For drivers out there, there are not distraction to drive at a normal speed, but it can rain at some point, so you should be prepared to drive at a slow speed if necessary." ];
     
 suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/clouds0.png ')"; 
    
@@ -1255,9 +1698,49 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/clouds" + 
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});         
+    
 }
-
-
-
-  
         

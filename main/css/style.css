@@ -305,8 +305,8 @@ button:focus {
          }
 /* ---------------- aboutPage ------------------  */
 #about-div {
-            position: absolute;
-            
+          position: absolute;
+            top: 0;
             left: 0;
             background-size: cover;
             background-repeat: no-repeat;
@@ -327,23 +327,21 @@ button:focus {
 }
 
 #inner_header{
-            position: absolute;
+    position: absolute;
             top: 55%;
-            margin-top: 10%;
             left: 0;
-            margin:auto;
             background-color: rgba(240,240,240, 0.9);
-            width: 980px;
-            height: 1980px;
+            width: 100%;
+            height: 2180px;
             font-family: MontserratRegular;
 }
 #about_subtitle {
   text-align: center; 
     font-size: 45pt;
     font-family: MontserratRegular;
-    margin-top: 100px;
-    bottom: 8%;
     
+  
+    bottom:15%;
     width: 980px;
     height: 100px;
     position: absolute;
@@ -395,7 +393,7 @@ button:focus {
             position: absolute;
             right: 0px;
             left: 0px;
-            bottom: -5%;
+            top: 93.7%;
             margin:auto;
             width: 20%;
             height: 3%;
@@ -413,14 +411,14 @@ button:focus {
 
 #footer3{
 position: absolute;
-            top: 110%;
+            top: 97%;
             background-color:#2c2c4b;
             width: 100%;
             height: 10%;
 }
 #footerDiv{
     position: absolute; 
-    top: 90%;
+    top: 83%;
      background-image: url(http://maxpixel.freegreatpicture.com/static/photo/1x/Raining-Window-Glass-Saigon-Vietnam-Drops-Rain-1447723.jpg);
     background-color: white; 
     background-size: cover; 
@@ -431,10 +429,8 @@ position: absolute;
 }
 #footerDivText{
     position: absolute; 
-    height: 30%;
-    width: 880px;
-    top:-10%;
-    bottom: 100%;
+    height: 49%;
+    width: 900F;
     background-color: rgba(230, 230, 230, 1);
     margin-top: 20px; 
     padding: 50px;
@@ -445,14 +441,14 @@ position: absolute;
              position: absolute;
             top: 0;
             left: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
             background-image: url(https://www.publicdomainpictures.net/pictures/20000/velka/sad-man-and-rain-1330349202VkV.jpg);
             width: 100%;
             height: 100%;
             overflow: auto;
             display: block;
             animation: fade 1s;
-            background-repeat: no-repeat;
-            background-size: cover;
     
         }
 .trans-div {
@@ -460,10 +456,14 @@ position: absolute;
           text-align: left;
           font-size: 20pt; 
           background-color: rgba(210, 210, 210, 0.7);
-          width: 980px;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 35px;
+          padding-bottom: 20px;
+          width: 97%;
           height: 500px;
           margin-top: 10px;
-          margin-bottom: 10px;
+        margin-bottom: 10px;
           -moz-border-radius: 7px;
           -webkit-border-radius: 7px;
             font-family: MyriadPro;
@@ -740,8 +740,7 @@ input:checked + .slider:before {
            .checkWeather_img{
             position: absolute;
             left: 10%;
-            top: 0;
-               bottom: 0;
+             top: 30%;
                margin: auto;
             width: 25%;
             height: 40%;
@@ -808,7 +807,10 @@ input:checked + .slider:before {
             bottom:-20px;
             font-size: 30px;;
             right: 15px;
-            right: 15px;
+            width: 300px;
+            height: 36px;
+            overflow: hidden;
+            text-align: right;
             font-family: MontserratRegular;
         }
         #temperImg2{
@@ -1136,7 +1138,7 @@ input:checked + .slider:before {
            margin: auto;
            width: 100%;
            height: 15%;
-           font-size: 15px;
+           font-size: 20px;
            text-align: left;
            overflow: hidden;   
         }
@@ -1323,18 +1325,18 @@ input:checked + .slider:before {
         }
         
         .travel_p{
-           color: #525252;
-           font-family: MontserratRegular;
+             color: #525252;
+          font-family: MontserratRegular;
            position: absolute;
-            top:10%;
+            top:11%;
            left:0;
            right: 0;
            margin: auto;
            width: 100%;
-           height: 20%;
+           height: 15%;
            font-size: 20px;
            text-align: left;
-           overflow: hidden   
+           overflow: hidden;    
         }
         
          .travel_img{
@@ -1490,37 +1492,53 @@ input:checked + .slider:before {
         
           .footer1_explore{ position: absolute;
               position: absolute;
-            left: 0;
-            right: 0;
+            left: 27%;
+           
             bottom: 15%;
-            margin: auto;  
-            width: 15%;
+          
+            width: 20%;
             height: 40%;}  
         
-        
-          .footer1_shop{ position: absolute;
-            position: absolute;
-            left: 20%;
-            bottom: 15%;
-            width: 15%;
-            height: 40%;}  
-        
+  
           .footer1_more{ position: absolute;
               
-            right: 20%;
+            right: 29%;
             bottom: 15%;
-            width: 15%;
+            width: 20%;
             height: 40%;}
+
+   .footer1_shop{ position: absolute;
+            position: absolute;
+            left: 5%;
+            bottom: 15%;
+            width: 20%;
+            height: 40%;} 
+
+
+     .footer1_moreOver{ position: absolute;
+              
+            right: 5%;
+            bottom: 15%;
+            width: 20%;
+            height: 40%;}
+    
         
         .footer1_h2{
             font-family: MontserratRegular;
             color: #00ff9c;
             position: absolute;
             top: 0;
+           -webkit-transition-duration:0.1s;
             margin: auto;  
             width: 100%;
             height: 20%;
             text-align: center;} 
+
+ 
+         .footer1_h2:hover {
+           transform:scale(1.2);
+           }
+
         
          .footer1_p1{
             font-family: MontserratRegular; 
@@ -1625,8 +1643,8 @@ input:checked + .slider:before {
              .mapDiv{
             position: absolute;
             left: 5%;
-            top: 0;
-            bottom: 0;
+            top: 25%;
+           
             margin: auto;
             width: 35%;
             height: 60%;
@@ -1690,7 +1708,9 @@ input:checked + .slider:before {
         .travelDiv{
             position: absolute;
             right: 10%;
-            top: 5%;
+            top: 0;
+            bottom: 0;
+            
          
             margin: auto;
             width: 45%;
@@ -1852,12 +1872,14 @@ input:checked + .slider:before {
 }
 }
 
-/*        temperDiv_Future     */
+/*////////////////////////        temperDiv_Future     */
+
+
 
 #temperDiv_Future{
             position: absolute;
             right: 20%;
-            top: 10%;
+            top: 14%;
            
             margin: auto;
             width: 60%;
@@ -2293,10 +2315,10 @@ input:checked + .slider2:before {
   max-width: 400px;
   min-width: 180px;
   margin: 0 auto;
-  border: 2px solid #3b455f;
+  border: 5px solid #3b455f;
   background-color:#ebebeb;
   z-index: 10;
-  margin-top:2%;
+  margin-top:5%;
 }
 .custom-select select {
   border: none;
@@ -2320,14 +2342,18 @@ input:checked + .slider2:before {
   width: 50px;
   height: 100%;
   line-height: 38px;
-  content: "∨";
+/*  content: "∨";*/
+ content: "";
+  background-image: url("../img/darrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
   text-align: center;
   color: black;
   font-size: 24px;
-  border-left: 2px solid #3b455f;
+ 
   z-index: -1;
+    border-left: 5px solid #3b455f;
 }
 
-/*  Check Weather  */
-
-
+ 
