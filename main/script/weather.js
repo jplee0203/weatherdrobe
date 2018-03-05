@@ -21,7 +21,10 @@ var wearDiv3 = document.getElementById("wearDiv3");
 var wearDiv4 = document.getElementById("wearDiv4");
 var wearDiv5 = document.getElementById("wearDiv5");
 var toggleBut = document.getElementById("toggleMF");
+var toggleBut2 = document.getElementById("toggleMF2");
 var genderCase = 0;
+var shirtIcon2= document.getElementById("shirtIcon_Future");
+var shoesIcon2= document.getElementById("shoesIcon_Future");  
 var leanMore_weather = "https://github.com/jplee0203/weatherdrobe";
 
 toggleBut.addEventListener("click", function(){  
@@ -40,25 +43,24 @@ toggleBut.addEventListener("click", function(){
      
  } 
 
-  
-//    if(toggleBut.checked) {  
-//       
-//  if(shoesIcon.style.backgroundImage === "URL('./img/wearIcon/shoes-shoes-man.png')"){}
-//   
-//  
-//   shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirts-woman.png')";
-//  
-//    } 
-//    else {   
-//   
-//         
-//       shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
-//     shirtIcon.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
-//    }
-    
-
-
 }); 
+
+//toggleBut2.addEventListener("click", function(){  
+//
+//     if(genderCase == 1){
+//     if(toggleBut2.checked) { shoesIcon2.style.backgroundImage = "URL('./img/wearIcon/shoes-woman.png')"
+//    } else { shoesIcon2.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')"; }
+//     
+// } else if (genderCase == 2) {
+//      if(toggleBut2.checked) { shoesIcon.style.backgroundImage = "URL('./img/wearIcon/shoes-woman.png')";
+//             shirtIcon2.style.backgroundImage = "URL('./img/wearIcon/shirts-woman.png')";
+//    } else { shoesIcon2.style.backgroundImage = "URL('./img/wearIcon/shoes-man.png')";
+//             shirtIcon2.style.backgroundImage = "URL('./img/wearIcon/shirt-man.png')";
+//           }
+//     
+// } 
+//
+//}); 
 
 // shirts && shoes 
 function umbrellaWeather(){
