@@ -1,4 +1,5 @@
 var counter = 0;
+var counter = 0;
 var initialLocation = true;
 var previousLocation;
 var pyrmont = {lat: null, lng: null};   
@@ -59,7 +60,9 @@ var autocomplete = new google.maps.places.Autocomplete(
         });
           
 searchBut.addEventListener('click', function() {        
-            
+        
+        city = searchInp.value;
+        
         if (searchInp.value == ""){
             placeID = initialPlaceID; 
         }
@@ -67,8 +70,8 @@ searchBut.addEventListener('click', function() {
         else {    
             //get location data from the autocomplete function in the search bar
             var place = autocomplete.getPlace();
-            var city = place.name;
-            var cityArr = city.split(" ");
+            var mapCity = place.name;
+            var cityArr = mapCity.split(" ");
             cityName = cityArr[cityArr.length - 1];
 
             console.log("place", place);
@@ -89,7 +92,7 @@ searchBut.addEventListener('click', function() {
               return;
             }
          
-              
+             readWeather(); 
               
             //console.log(results);
         var lat = results[0].geometry.location.lat();

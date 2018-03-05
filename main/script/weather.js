@@ -17,7 +17,12 @@ var shoesP = document.getElementById("shoesP");
 var accessoriesP = document.getElementById("accessoriesP");
 var wearDiv1 = document.getElementById("wearDiv1");
 var toggleBut = document.getElementById("toggleMF");
-var genderCase = 0
+var genderCase = 0;
+//var city;
+var country;
+
+var searchInp = document.getElementById("searchInp");    
+var city = searchInp.value;
 
 toggleBut.addEventListener("click", function(){  
 
@@ -133,8 +138,8 @@ var map = document.getElementById("map");
                     lng: 0
             };
             
-            var country;
-            var city;
+            //var country;
+            //var city;
             var weatherKey = "bbeb34ebf60ad50f7893e7440a1e2b0b";
          
         
@@ -162,19 +167,26 @@ var map = document.getElementById("map");
                 
                 console.log ("working here");
                 
-                initMap();           
+                var geocoder = new google.maps.Geocoder;
+
+              if (LatLng.lat != 0 && LatLng.lng != 0) {
+                geocodeLatLng(geocoder);
+            }
+
+                
+                //initMap();           
             }    
             
     
-      function initMap() {
-        
-        var geocoder = new google.maps.Geocoder;
-
-          if (LatLng.lat != 0 && LatLng.lng != 0) {
-            geocodeLatLng(geocoder);
-        }
-    
-      }
+//      function initMap() {
+//        
+//            var geocoder = new google.maps.Geocoder;
+//
+//              if (LatLng.lat != 0 && LatLng.lng != 0) {
+//                geocodeLatLng(geocoder);
+//            }
+//
+//      }
         
     function insertSearch(){
         var request;
@@ -201,7 +213,7 @@ var map = document.getElementById("map");
                 
     }    
         
-
+/*
     function insertWeather(){
         var request;
         
@@ -229,10 +241,12 @@ var map = document.getElementById("map");
 
                 request.send(weatherObj);
     }      
-        
+*/        
         
     //reverse geocode to get location info form LatLng  
     function geocodeLatLng(geocoder) {
+        
+        console.log("geo");
         
         geocoder.geocode({'location': LatLng}, function(results, status) {
           if (status === 'OK') {
@@ -247,6 +261,7 @@ var map = document.getElementById("map");
                 
                 city = results[0].address_components[2].long_name;
 
+                console.log(city);
                 
                 var searchInp = document.getElementById("searchInp");
                 
@@ -254,7 +269,8 @@ var map = document.getElementById("map");
         
 //                insertSearch();
                 
-                getWeather();
+                //getWeather();
+                readWeather();
                 
             } else {
               window.alert('No results found');
@@ -430,6 +446,121 @@ if(current_condition === "Snow"){
 
 
  function readWeather(){
+        
+        
+/* Forecast */     
+        console.log(city);
+        var xhttp_weather_forecast = new XMLHttpRequest();
+        xhttp_weather_forecast.open("GET", "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&APPID=" + weatherKey);
+        xhttp_weather_forecast.send();
+        xhttp_weather_forecast.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200){
+                var response = JSON.parse(this.responseText);
+                console.log(response);
+                
+                var today = new Date(),
+                    day1 = today.getDate(),
+                    day2 = today.getDate()+1,
+                    day3 = today.getDate()+2,
+                    day4 = today.getDate()+3,
+                    day5 = today.getDate()+4,
+                    
+                    month = today.getMonth() + 1,
+                    year = today.getFullYear();
+                
+                if (month < 10){
+                    month = "0" + month;
+                }
+                
+                
+                if (day1 < 10){
+                    day1 = "0" + day1;
+                }
+                
+                if (day2 < 10){
+                    day2 = "0" + day2;
+                }
+                
+                if (day3 < 10){
+                    day3 = "0" + day3;
+                }
+                
+                if (day4 < 10){
+                    day4 = "0" + day4;
+                }
+                
+                if (day5 < 10){
+                    day5 = "0" + day5;
+                }
+                
+                
+                
+                var date1 = year + "-" + month + "-" + day1;
+                var date2 = year + "-" + month + "-" + day2;
+                var date3 = year + "-" + month + "-" + day3;
+                var date4 = year + "-" + month + "-" + day4;
+                var date5 = year + "-" + month + "-" + day5;
+                
+                console.log(date1);
+                console.log(date2);
+                console.log(date3);
+                console.log(date4);
+                console.log(date5);
+                
+                  function insertForecast(){
+                var request;
+        
+                if(window.XMLHttpRequest){
+                    request = new XMLHttpRequest();
+                }
+
+                else if(window.ActiveXObject){
+                    request = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+
+                var forecastObj = new FormData();
+                
+                forecastObj.append("day1_condition", response.list[0].weather[0].main);
+                forecastObj.append("day1_description", response.list[0].weather[0].description);
+                forecastObj.append("day1_high_temp", response.list[0].main.temp_max);
+                forecastObj.append("day1_low_temp", response.list[0].main.temp_min);
+                forecastObj.append("day1_date", date1);
+                
+                forecastObj.append("day2_condition", response.list[8].weather[0].main);
+                forecastObj.append("day2_description", response.list[8].weather[0].description);
+                forecastObj.append("day2_high_temp", response.list[8].main.temp_max);
+                forecastObj.append("day2_low_temp", response.list[8].main.temp_min);
+                forecastObj.append("day2_date", date2);
+            
+                forecastObj.append("day3_condition", response.list[16].weather[0].main);
+                forecastObj.append("day3_description", response.list[16].weather[0].description);
+                forecastObj.append("day3_high_temp", response.list[16].main.temp_max);
+                forecastObj.append("day3_low_temp", response.list[16].main.temp_min);
+                forecastObj.append("day3_date", date3);
+            
+                forecastObj.append("day4_condition", response.list[24].weather[0].main);
+                forecastObj.append("day4_description", response.list[24].weather[0].description);
+                forecastObj.append("day4_high_temp", response.list[24].main.temp_max);
+                forecastObj.append("day4_low_temp", response.list[24].main.temp_min);
+                forecastObj.append("day4_date", date4);
+            
+                forecastObj.append("day5_condition", response.list[32].weather[0].main);
+                forecastObj.append("day5_description", response.list[32].weather[0].description);
+                forecastObj.append("day5_high_temp", response.list[32].main.temp_max);
+                forecastObj.append("day5_low_temp", response.list[32].main.temp_min);
+                forecastObj.append("day5_date", date5);
+            
+            
+            
+                request.open("POST", "./php/insertWeather.php", true);
+
+                request.send(forecastObj);
+    }             
+                
+                            
+                insertForecast();
+            }
+        } 
 //        var request;
 //        
 //        if(window.XMLHttpRequest){
@@ -453,8 +584,9 @@ if(current_condition === "Snow"){
 //        request.open("GET", "./php/readWeather.php", true);
 //        
 //        request.send();
-    var searchInp = document.getElementById("searchInp");    
-    var city = searchInp.value;
+        
+    //var searchInp = document.getElementById("searchInp");    
+    //var city = searchInp.value;
         
         var xhttp_weather = new XMLHttpRequest();
         xhttp_weather.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&APPID=" + weatherKey);
@@ -1124,3 +1256,8 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/clouds" + 
 suggestion_p.innerHTML = weatherInfo[num]
 });
 }
+
+
+
+  
+        
