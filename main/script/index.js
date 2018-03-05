@@ -254,7 +254,11 @@ document.getElementById("searchBut").addEventListener("click", function(){
 if(document.getElementById("searchInp").value != ""){
 document.getElementById("searchInp").style.display = "none";
 document.getElementById("searchBut").style.display = "none";
-document.getElementById("redo").style.display = "block";    
+document.getElementById("redo").style.display = "block"; 
+document.getElementById("wearBut").style.display = "block";
+document.getElementById("travelBut").style.display = "block";
+document.getElementById("futureBut").style.display = "block";     
+    
   }
 });
 document.getElementById("redo").addEventListener("click", function(){

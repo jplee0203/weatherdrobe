@@ -938,6 +938,7 @@ input:checked + .slider:before {
             cursor: pointer;
             text-align: center;
             z-index: 2;
+            display: none;
         }
         .travelBut{
             font-family: MontserratRegular;
@@ -953,6 +954,7 @@ input:checked + .slider:before {
             cursor: pointer;
             text-align: center;
             z-index: 2;
+            display: none;
         }
 .futureBut{
             font-family: MontserratRegular;
@@ -968,6 +970,7 @@ input:checked + .slider:before {
             cursor: pointer;
             text-align: center;
             z-index: 2;
+            display: none;
             
 }
         .weatherBut_clicked{
