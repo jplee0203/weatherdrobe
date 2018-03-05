@@ -26,6 +26,7 @@ var genderCase = 0;
 var shirtIcon2= document.getElementById("shirtIcon_Future");
 var shoesIcon2= document.getElementById("shoesIcon_Future");  
 var leanMore_weather = "https://github.com/jplee0203/weatherdrobe";
+var leanMore_travel = "https://github.com/jplee0203/weatherdrobe";
 
 toggleBut.addEventListener("click", function(){  
 
@@ -667,9 +668,20 @@ var suggestion_p = document.getElementById("suggestion_p");
 var suggestion_h1 = document.getElementById("suggestion_h1");
 var learnWeater = document.getElementById("learnWeater");
 
+var travel_show = document.getElementById("travel_show");
+var travel_left = document.getElementById("travel_left");
+var travel_right = document.getElementById("travel_right");
+var travel_p = document.getElementById("travel_p");
+var travel_h1 = document.getElementById("travel_h1");
+var learnTravel = document.getElementById("learnTravel");
+
 learnWeater.addEventListener("click", function(){  
   window.open(leanMore_weather);
-});       
+});
+
+learnTravel.addEventListener("click", function(){  
+  window.open(leanMore_travel);
+});
 
 
 //weather info _ haze&smoke 
@@ -715,6 +727,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/haze" + nu
 suggestion_p.innerHTML = weatherInfo[num]
 
 });
+    
+////////////////////  travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/haze" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});    
+   
 }
 
 
@@ -758,6 +814,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/snow" + nu
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+////////////////////  travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/snow" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+    
 }
 
 //weather info _ Thunderstorm
@@ -797,6 +897,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/thundersto
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+
+////////////////////  travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/thunderstorm" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});    
+    
 }
 
 //weather info _ drizzle
@@ -833,6 +977,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/drizzle" +
 } 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+////////////////////  travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/drizzle" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});  
+    
 }
 
 
@@ -875,6 +1063,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/rain" + nu
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/rain" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});        
+  
 }
 
 //weather info _ Mist
@@ -916,6 +1148,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/mist" + nu
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/mist" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});      
+    
 }
 
 //weather info _ Sand, dust whirls
@@ -957,6 +1233,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/sdWhirls" 
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/sdWhirls" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});         
+    
 }
 
 
@@ -999,6 +1319,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/volcanicAs
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/volcanicAsh" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});   
+    
 }
 
 
@@ -1041,6 +1405,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/squalls" +
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/squalls" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});   
+    
 }
 
 
@@ -1083,6 +1491,50 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/clear" + n
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clear" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});      
+    
 }
 
 
@@ -1126,4 +1578,48 @@ suggestion_show.style.backgroundImage = "url('./img/WeatherSuggestion/clouds" + 
 
 suggestion_p.innerHTML = weatherInfo[num]
 });
+    
+// travel 
+   
+var num2=0;    
+    
+var travelInfo = ["1", "2", "3" ];
+    
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds0.png ')"; 
+
+travel_h1.innerHTML = "The Weather is Terrible Today"
+travel_p.innerHTML = travelInfo[0]     
+
+//right    
+travel_right.addEventListener("click", function(){ 
+
+num2 = num2 + 1; 
+      
+if (num2 > 2 ){  
+num2=0;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});
+        
+//left
+travel_left.addEventListener("click", function(){  
+
+num2= num2 - 1;
+   
+if (num2 < 0 ){  
+num2=2;
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds" + num2 + ".png ')"; 
+} else {
+travel_show.style.backgroundImage = "url('./img/travelSuggestion/clouds" + num2 + ".png ')"; 
+} 
+
+travel_p.innerHTML = travelInfo[num2]
+
+});         
+    
 }
